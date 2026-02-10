@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Supabase local CLI temp state
+supabase/.temp/
+
+# Python
+__pycache__/
+*.pyc
