@@ -2440,6 +2440,10 @@
             </div>
         </div>
     </div>
+
+    <div id="app-version-badge" style="position: fixed; right: 10px; bottom: 10px; z-index: 90; background: rgba(15, 23, 42, 0.82); color: #cbd5e1; border: 1px solid rgba(148, 163, 184, 0.35); border-radius: 8px; padding: 6px 10px; font-size: 11px; font-family: 'Inter', sans-serif; letter-spacing: 0.2px;">
+        Version: loading...
+    </div>
     
     <script>
         // ============================================
@@ -2465,6 +2469,7 @@
             updatedV2: 'ppl-updated-v2',   // { [questionId]: isoString }
             legacyProgress: 'ppl-progress'
         };
+        const APP_VERSION = 'v2026.02.11+61830db';
 
         const CLOUD = {
             get projectUrl() {
@@ -8095,6 +8100,13 @@ const questions = ALL_QUESTIONS;
             console.log('Last sync:', cloudSync.lastSyncTime ? new Date(cloudSync.lastSyncTime).toLocaleString() : 'Never');
         }
 
+        function renderAppVersion() {
+            const el = document.getElementById('app-version-badge');
+            if (!el) return;
+            el.textContent = `Version: ${APP_VERSION}`;
+            el.title = `App version ${APP_VERSION}`;
+        }
+
         async function forceSyncNow() {
             await syncNow({ showAlerts: false });
             console.log('✅ Force sync complete');
@@ -8105,6 +8117,7 @@ const questions = ALL_QUESTIONS;
         // ============================================
         window.addEventListener('DOMContentLoaded', async () => {
             console.log('[App] Initializing...');
+            renderAppVersion();
             updateStats();
 
             if (cloudSync.isReady()) {
