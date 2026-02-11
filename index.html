@@ -2212,7 +2212,7 @@
                         ⚙️ Cloud Sync Setup
                     </button>
                     <button type="button" class="main-reset-btn" onclick="resetCloudSyncSettings()">
-                        🧹 Reset Cloud Sync
+                        🧹 Reset Sync + Local Data
                     </button>
                 </div>
             </div>
@@ -2599,7 +2599,13 @@
 
         let cloudSync = new CloudSyncClient();
 
-        function resetCloudSyncSettings({ reload = true } = {}) {
+        function resetCloudSyncSettings({ reload = true, clearLocalProgress = true } = {}) {
+            const warning = clearLocalProgress
+                ? 'This will disconnect Cloud Sync and clear local study progress on this device. It does not delete rows already stored in Supabase. Continue?'
+                : 'This will disconnect Cloud Sync on this device. Continue?';
+            if (!confirm(warning)) return;
+
+            if (cloudSync) cloudSync.stopAutoSync();
             [
                 STORAGE.supabaseUrl,
                 STORAGE.supabaseAnonKey,
@@ -2608,6 +2614,18 @@
                 STORAGE.tokenExpiresAt
             ].forEach((k) => localStorage.removeItem(k));
             if (cloudSync) cloudSync.clearSession();
+
+            if (clearLocalProgress) {
+                progress = {};
+                attempts = {};
+                updated = {};
+                localStorage.removeItem(STORAGE.progressV2);
+                localStorage.removeItem(STORAGE.attemptsV2);
+                localStorage.removeItem(STORAGE.updatedV2);
+                localStorage.removeItem(STORAGE.legacyProgress);
+                updateStats();
+            }
+
             if (reload) location.reload();
         }
 
