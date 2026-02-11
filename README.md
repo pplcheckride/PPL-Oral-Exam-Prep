@@ -29,3 +29,4 @@ python3 -m http.server 8000
 ```sh
 PUBLISHABLE_KEY="sb_publishable_..." bash scripts/deploy_and_smoke_test.sh
 ```
+
