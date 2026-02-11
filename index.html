@@ -11,12 +11,19 @@
             padding: 0;
             box-sizing: border-box;
         }
+
+        :root {
+            --font-label-min: 12px;
+            --font-body-mobile-min: 14px;
+            --font-body-desktop-min: 15px;
+        }
         
         body {
             font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
             min-height: 100vh;
             color: #fff;
+            font-size: var(--font-body-desktop-min);
         }
         
         .container {
@@ -51,7 +58,7 @@
             color: white;
             padding: 6px 16px;
             border-radius: 20px;
-            font-size: 11px;
+            font-size: var(--font-label-min);
             font-weight: 700;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -97,7 +104,7 @@
             padding-top: 24px;
             border-top: 1px solid rgba(255,255,255,0.1);
             color: #94a3b8;
-            font-size: 13px;
+            font-size: var(--font-body-desktop-min);
         }
         
         .start-button {
@@ -131,7 +138,7 @@
             background: rgba(255,255,255,0.05);
             padding: 16px;
             border-radius: 10px;
-            font-size: 14px;
+            font-size: var(--font-body-desktop-min);
             color: #cbd5e1;
             display: flex;
             align-items: center;
@@ -232,7 +239,7 @@
         }
         
         .step-content p {
-            font-size: 14px;
+            font-size: var(--font-body-desktop-min);
             color: #cbd5e1;
             line-height: 1.6;
         }
@@ -264,7 +271,7 @@
         .onboarding-skip {
             margin-top: 16px;
             color: #94a3b8;
-            font-size: 13px;
+            font-size: var(--font-body-desktop-min);
         }
         
         /* Upgrade Modal */
@@ -332,7 +339,7 @@
             gap: 12px;
             margin-bottom: 12px;
             color: #cbd5e1;
-            font-size: 14px;
+            font-size: var(--font-body-desktop-min);
         }
         
         .upgrade-feature:last-child {
@@ -440,9 +447,158 @@
             border-radius: 12px;
             padding: 16px;
             color: #fca5a5;
-            font-size: 14px;
+            font-size: var(--font-body-desktop-min);
             font-weight: 600;
             margin-bottom: 24px;
+        }
+
+        /* Mock History Modal */
+        .mock-history-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1002;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .mock-history-overlay.hidden {
+            display: none;
+        }
+
+        .mock-history-modal {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.45) 0%, rgba(30, 64, 175, 0.45) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 20px;
+            padding: 28px;
+            width: min(92vw, 760px);
+            max-height: 82vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+            animation: fadeInUp 0.35s ease;
+        }
+
+        .mock-history-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .mock-history-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .mock-history-close-btn {
+            border: 1px solid rgba(255,255,255,0.35);
+            background: rgba(255,255,255,0.1);
+            color: #e2e8f0;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            line-height: 1;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .mock-history-close-btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .mock-history-status {
+            color: #cbd5e1;
+            font-size: var(--font-body-desktop-min);
+            line-height: 1.55;
+            margin-bottom: 14px;
+        }
+
+        .mock-history-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .mock-history-item {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            padding: 14px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .mock-history-main {
+            color: #f8fafc;
+            font-size: var(--font-body-desktop-min);
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .mock-history-meta {
+            color: #cbd5e1;
+            font-size: var(--font-body-desktop-min);
+        }
+
+        .mock-history-badge {
+            font-size: var(--font-label-min);
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border-radius: 999px;
+            padding: 6px 10px;
+            white-space: nowrap;
+        }
+
+        .mock-history-badge.pass {
+            background: rgba(16,185,129,0.22);
+            color: #86efac;
+            border: 1px solid rgba(16,185,129,0.45);
+        }
+
+        .mock-history-badge.fail {
+            background: rgba(239,68,68,0.2);
+            color: #fca5a5;
+            border: 1px solid rgba(239,68,68,0.45);
+        }
+
+        .mock-history-empty {
+            background: rgba(255,255,255,0.08);
+            border: 1px dashed rgba(255,255,255,0.25);
+            border-radius: 12px;
+            padding: 18px;
+            color: #cbd5e1;
+            font-size: var(--font-body-desktop-min);
+            text-align: center;
+        }
+
+        .mock-history-action-btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 12px;
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: none;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: #ffffff;
+            font-size: var(--font-body-desktop-min);
+            font-weight: 700;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
         }
         
         .reset-buttons {
@@ -553,7 +709,7 @@
             border-radius: 12px;
             padding: 16px;
             color: #92400e;
-            font-size: 14px;
+            font-size: var(--font-body-desktop-min);
             text-align: center;
             margin: 24px 0;
         }
@@ -564,7 +720,7 @@
             border-radius: 12px;
             padding: 16px;
             color: #1e40af;
-            font-size: 14px;
+            font-size: var(--font-body-desktop-min);
             text-align: center;
             margin: 24px 0;
         }
@@ -860,7 +1016,7 @@
         }
         
         .tagline {
-            font-size: 11px;
+            font-size: var(--font-label-min);
             color: #cbd5e1;
             font-weight: 500;
             text-transform: uppercase;
@@ -923,7 +1079,7 @@
         }
         
         .stat-label {
-            font-size: 11px;
+            font-size: var(--font-label-min);
             color: #cbd5e1;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -1264,7 +1420,7 @@
             color: white;
             padding: 4px 12px;
             border-radius: 12px;
-            font-size: 10px;
+            font-size: var(--font-label-min);
             font-weight: 700;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -1278,7 +1434,7 @@
             color: white;
             padding: 6px 14px;
             border-radius: 20px;
-            font-size: 11px;
+            font-size: var(--font-label-min);
             font-weight: 800;
             letter-spacing: 0.5px;
             text-transform: uppercase;
@@ -1311,7 +1467,7 @@
         }
         
         .mode-desc {
-            font-size: 14px;
+            font-size: var(--font-body-desktop-min);
             color: #64748b;
             line-height: 1.6;
         }
@@ -1413,7 +1569,7 @@
             color: white;
             padding: 6px 16px;
             border-radius: 6px;
-            font-size: 11px;
+            font-size: var(--font-label-min);
             font-weight: 700;
             letter-spacing: 1px;
             margin-bottom: 16px;
@@ -1442,7 +1598,7 @@
             border: 1px solid #93c5fd;
             padding: 10px 16px;
             border-radius: 8px;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 600;
             color: #1e40af;
             text-decoration: none;
@@ -1573,7 +1729,7 @@
         
         .trap-explanation-text {
             color: #dc2626;
-            font-size: 14px;
+            font-size: var(--font-body-desktop-min);
             line-height: 1.7;
             font-weight: 600;
         }
@@ -1644,7 +1800,7 @@
         }
         
         .details-arrow {
-            font-size: 10px;
+            font-size: var(--font-label-min);
             transition: transform 0.2s;
             margin-left: auto;
         }
@@ -1667,7 +1823,7 @@
         
         .regulatory-details p {
             color: #475569;
-            font-size: 14px;
+            font-size: var(--font-body-desktop-min);
             line-height: 1.8;
             margin-bottom: 14px;
         }
@@ -1698,7 +1854,7 @@
         
         .recall-content {
             color: #581c87;
-            font-size: 14px;
+            font-size: var(--font-body-desktop-min);
             font-weight: 600;
             line-height: 1.7;
         }
@@ -1877,7 +2033,7 @@
         }
 
         .trial-banner-desc {
-            font-size: 13px;
+            font-size: var(--font-body-desktop-min);
             color: #fffbeb;
             line-height: 1.45;
         }
@@ -1898,7 +2054,7 @@
             border: 1px solid #d97706;
             border-radius: 999px;
             padding: 4px 10px;
-            font-size: 11px;
+            font-size: var(--font-label-min);
             font-weight: 700;
             margin-left: 8px;
         }
@@ -1961,6 +2117,10 @@
         
         /* Mobile */
         @media (max-width: 768px) {
+            body {
+                font-size: var(--font-body-mobile-min);
+            }
+
             .welcome-card {
                 padding: 40px 30px;
             }
@@ -1992,14 +2152,14 @@
             .hero-badge {
                 top: 16px;
                 right: 16px;
-                font-size: 10px;
+                font-size: var(--font-label-min);
                 padding: 6px 12px;
             }
             
             .start-here-badge {
                 top: 12px;
                 right: 12px;
-                font-size: 10px;
+                font-size: var(--font-label-min);
                 padding: 5px 12px;
             }
             
@@ -2060,7 +2220,7 @@
             
             .mock-back-btn {
                 padding: 10px 16px;
-                font-size: 13px;
+                font-size: var(--font-body-mobile-min);
             }
             
             .mock-question-card {
@@ -2127,6 +2287,27 @@
 
             .stat-grid-4 {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .mock-history-modal {
+                padding: 20px;
+            }
+
+            .mock-history-title {
+                font-size: 24px;
+            }
+
+            .mock-history-main {
+                font-size: var(--font-body-mobile-min);
+            }
+
+            .mock-history-meta {
+                font-size: var(--font-label-min);
+            }
+
+            .mock-history-action-btn {
+                width: 100%;
+                font-size: var(--font-body-mobile-min);
             }
         }
     </style>
@@ -2255,6 +2436,18 @@
             </div>
         </div>
     </div>
+
+    <!-- Mock History Modal -->
+    <div class="mock-history-overlay hidden" id="mock-history-overlay" onclick="if (event.target === this) closeMockHistoryModal()">
+        <div class="mock-history-modal" id="mock-history-modal">
+            <div class="mock-history-header">
+                <h2 class="mock-history-title">Mock History</h2>
+                <button type="button" class="mock-history-close-btn" id="mock-history-close-btn" onclick="closeMockHistoryModal()" aria-label="Close mock history">×</button>
+            </div>
+            <div class="mock-history-status" id="mock-history-status"></div>
+            <div class="mock-history-list" id="mock-history-list"></div>
+        </div>
+    </div>
     
     <!-- Onboarding Modal (hidden initially) -->
     <div class="onboarding-overlay hidden" id="onboarding-overlay">
@@ -2333,14 +2526,8 @@
                     <button type="button" class="main-action-btn destructive" onclick="resetProgressMainPage(event)">
                         🔄 Reset All Progress
                     </button>
-                    <button type="button" class="main-action-btn" onclick="connectCloudSync()">
-                        ☁️ Cloud Sync
-                    </button>
-                    <button type="button" class="main-action-btn" onclick="configureCloudSync()">
-                        ⚙️ Cloud Sync Setup
-                    </button>
-                    <button type="button" class="main-action-btn" onclick="resetCloudSyncSettings()">
-                        🧹 Reset Sync + Local Data
+                    <button type="button" class="main-action-btn" id="connect-sync-btn" onclick="connectCloudSync()">
+                        🔐 Activate Premium & Sync
                     </button>
                 </div>
                 <div class="mock-history-container" id="mock-history-container">
@@ -2511,7 +2698,7 @@
                             <span class="timer-label">TIME REMAINING:</span>
                             <span class="timer-display" id="timer-display">30:00</span>
                         </div>
-                        <button type="button" onclick="endSessionNow()" style="padding: 12px 20px; background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: white; border: none; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; box-shadow: 0 4px 15px rgba(239,68,68,0.3); white-space: nowrap;">
+                        <button type="button" onclick="endSessionNow()" style="padding: 12px 20px; background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: white; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; box-shadow: 0 4px 15px rgba(239,68,68,0.3); white-space: nowrap;">
                             End Session
                         </button>
                     </div>
@@ -2529,10 +2716,10 @@
                     <div class="mock-question-text" id="mock-question-text"></div>
                     
                     <div class="mock-thinking-space" id="mock-thinking-space">
-                        <p style="color: #64748b; font-size: 14px; text-align: center; margin-bottom: 8px;">
+                        <p style="color: #64748b; font-size: 15px; text-align: center; margin-bottom: 8px;">
                             💭 <strong>Think about YOUR answer first</strong>
                         </p>
-                        <p style="color: #94a3b8; font-size: 12px; text-align: center; margin-bottom: 16px;">
+                        <p style="color: #94a3b8; font-size: 15px; text-align: center; margin-bottom: 16px;">
                             What would you say to a DPE right now?
                         </p>
                         <button type="button" class="mock-reveal-btn" id="mock-reveal-btn" onclick="revealMockAnswer()">
@@ -2550,7 +2737,7 @@
                         <div style="text-align: center; margin: 24px 0 8px; color: #1e293b; font-size: 15px; font-weight: 700;">
                             How did you do?
                         </div>
-                        <div style="text-align: center; margin: 0 0 16px; color: #64748b; font-size: 13px;">
+                        <div style="text-align: center; margin: 0 0 16px; color: #64748b; font-size: 15px;">
                             Compare what you thought vs. the model answer above
                         </div>
                         
@@ -2895,6 +3082,12 @@
         }
 
         async function connectCloudSync() {
+            if (cloudSync.isReady()) {
+                await syncNow({ showAlerts: true });
+                renderAccessState();
+                return;
+            }
+
             if (location && location.protocol === 'file:') {
                 const ok = confirm(
                     'You opened this app as a local file (file://).\n\nCloud Sync usually works, but if you hit CORS/network issues, run:\n\npython3 -m http.server 8000\n\nThen open:\nhttp://localhost:8000/index.html\n\nContinue anyway?'
@@ -2931,8 +3124,7 @@
                     `❌ Cloud Sync failed.${info.status ? ` (HTTP ${info.status})` : ''}\n\n` +
                     `${info.reason}\n\n` +
                     extra +
-                    (info.hint ? `\nTip: ${info.hint}\n` : '\n') +
-                    `\nIf you previously configured a different project/key, click “🧹 Reset Sync + Local Data” then try again.`
+                    (info.hint ? `\nTip: ${info.hint}\n` : '\n')
                 );
                 renderSyncStatus();
                 renderAccessState();
@@ -7008,6 +7200,7 @@ const questions = ALL_QUESTIONS;
             const activeQuestionCount = getActiveQuestionIds().length;
 
             const welcomeBadge = document.getElementById('welcome-access-badge');
+            const connectSyncBtn = document.getElementById('connect-sync-btn');
             const trialBanner = document.getElementById('trial-banner');
             const trialStudyBadge = document.getElementById('trial-study-badge');
             const landingDescription = document.getElementById('landing-description');
@@ -7022,6 +7215,9 @@ const questions = ALL_QUESTIONS;
             const mockQuestionCountLabel = document.getElementById('mock-question-count-label');
 
             if (welcomeBadge) welcomeBadge.textContent = trial ? 'FREE TRIAL' : 'PREMIUM VERSION';
+            if (connectSyncBtn) {
+                connectSyncBtn.textContent = trial ? '🔐 Activate Premium & Sync' : '✅ Premium Sync Active';
+            }
             if (trialBanner) trialBanner.classList.toggle('hidden', !trial);
             if (trialStudyBadge) trialStudyBadge.classList.toggle('hidden', !trial);
 
@@ -7070,6 +7266,15 @@ const questions = ALL_QUESTIONS;
             }
 
             if (typeof updateStats === 'function') updateStats();
+        }
+
+        function applyTypographyBaseline(html) {
+            if (!html) return html;
+            return html
+                .replace(/font-size:\s*10px/gi, 'font-size: 12px')
+                .replace(/font-size:\s*11px/gi, 'font-size: 12px')
+                .replace(/font-size:\s*13px/gi, 'font-size: 15px')
+                .replace(/font-size:\s*14px/gi, 'font-size: 15px');
         }
         
         // Show app
@@ -7183,7 +7388,7 @@ const questions = ALL_QUESTIONS;
             
             // Insert into scenario card
             const questionCard = document.getElementById('question-card');
-            questionCard.innerHTML = completionHTML;
+            questionCard.innerHTML = applyTypographyBaseline(completionHTML);
         }
         
         // Close completion screen
@@ -7450,11 +7655,11 @@ const questions = ALL_QUESTIONS;
             const questionHtml = (q.question || '').toString().trim()
                 ? `<div style="background:#eff6ff; border: 1px solid #93c5fd; border-radius: 10px; padding: 14px; color:#1e3a8a; font-weight:700;">❓ ${formatInline(q.question)}</div>`
                 : '';
-            document.getElementById('mock-question-text').innerHTML = `${titleHtml}${scenarioHtml}${questionHtml}`;
+            document.getElementById('mock-question-text').innerHTML = applyTypographyBaseline(`${titleHtml}${scenarioHtml}${questionHtml}`);
             
             // Populate answer (hidden initially)
             const why = q.whyThisMatters ? `<div style="margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(15,23,42,0.08); color:#334155; font-size: 13px; line-height: 1.7;">${paragraphs(q.whyThisMatters)}</div>` : '';
-            document.getElementById('mock-answer-text').innerHTML = `${formatInline(q.correctAnswer || '')}${why}`;
+            document.getElementById('mock-answer-text').innerHTML = applyTypographyBaseline(`${formatInline(q.correctAnswer || '')}${why}`);
             document.getElementById('mock-reference-text').textContent = q.reference || '';
             document.getElementById('mock-reference-link').href = primaryLink(q.link) || '#';
             
@@ -7589,19 +7794,19 @@ const questions = ALL_QUESTIONS;
                     <div class="stat-grid-4" style="margin-bottom: 32px;">
                         <div style="background: #f0fdf4; padding: 20px; border-radius: 12px; border: 2px solid #bbf7d0; text-align: center;">
                             <div style="font-size: 36px; font-weight: 800; color: #16a34a;">${correct}</div>
-                            <div style="font-size: 11px; color: #16a34a; font-weight: 600; text-transform: uppercase;">Correct</div>
+                            <div style="font-size: 12px; color: #16a34a; font-weight: 600; text-transform: uppercase;">Correct</div>
                         </div>
                         <div style="background: #fffbeb; padding: 20px; border-radius: 12px; border: 2px solid #fde68a; text-align: center;">
                             <div style="font-size: 36px; font-weight: 800; color: #d97706;">${unsure}</div>
-                            <div style="font-size: 11px; color: #d97706; font-weight: 600; text-transform: uppercase;">Unsure</div>
+                            <div style="font-size: 12px; color: #d97706; font-weight: 600; text-transform: uppercase;">Unsure</div>
                         </div>
                         <div style="background: #fef2f2; padding: 20px; border-radius: 12px; border: 2px solid #fecaca; text-align: center;">
                             <div style="font-size: 36px; font-weight: 800; color: #dc2626;">${wrong}</div>
-                            <div style="font-size: 11px; color: #dc2626; font-weight: 600; text-transform: uppercase;">Wrong</div>
+                            <div style="font-size: 12px; color: #dc2626; font-weight: 600; text-transform: uppercase;">Wrong</div>
                         </div>
                         <div style="background: #f8fafc; padding: 20px; border-radius: 12px; border: 2px solid #cbd5e1; text-align: center;">
                             <div style="font-size: 24px; font-weight: 800; color: #475569;">${minutesUsed}:${secondsUsed.toString().padStart(2, '0')}</div>
-                            <div style="font-size: 11px; color: #475569; font-weight: 600; text-transform: uppercase;">Time Used</div>
+                            <div style="font-size: 12px; color: #475569; font-weight: 600; text-transform: uppercase;">Time Used</div>
                         </div>
                     </div>
                     
@@ -7623,7 +7828,7 @@ const questions = ALL_QUESTIONS;
             
             // Show results
             const resultsEl = document.getElementById('mock-results');
-            resultsEl.innerHTML = resultsHTML;
+            resultsEl.innerHTML = applyTypographyBaseline(resultsHTML);
             resultsEl.classList.remove('hidden');
             resultsEl.classList.add('active');
             
@@ -7651,7 +7856,7 @@ const questions = ALL_QUESTIONS;
                             <span style="background: ${statusColor}; color: white; padding: 6px 12px; border-radius: 8px; font-weight: 700; font-size: 12px; white-space: nowrap;">${statusIcon} ${statusText}</span>
                         </div>
                         <div style="background: white; border-radius: 8px; padding: 16px; margin-top: 12px;">
-                            <div style="color: #0f172a; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; color: #059669;">MODEL ANSWER</div>
+                            <div style="color: #0f172a; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; color: #059669;">MODEL ANSWER</div>
                             <div style="color: #334155; font-size: 14px; line-height: 1.7;">
                                 ${modelAnswer}
                             </div>
@@ -7663,7 +7868,7 @@ const questions = ALL_QUESTIONS;
                 `;
             });
             
-            document.getElementById('mock-review-list').innerHTML = reviewHTML;
+            document.getElementById('mock-review-list').innerHTML = applyTypographyBaseline(reviewHTML);
         }
         
         // Back to modes from mock results
@@ -8379,22 +8584,22 @@ const questions = ALL_QUESTIONS;
                             <div style="background: #f8fafc; padding: 20px; border-radius: 12px; text-align: center; border: 2px solid #e2e8f0;">
                                 <div style="font-size: 32px; font-weight: 800; color: #3b82f6;">${studied}</div>
                                 <div style="font-size: 12px; color: #64748b; font-weight: 600;">SCENARIOS STUDIED</div>
-                                <div style="font-size: 11px; color: #94a3b8; margin-top: 4px;">${studiedPercent}% complete</div>
+                                <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">${studiedPercent}% complete</div>
                             </div>
                             <div style="background: #f0fdf4; padding: 20px; border-radius: 12px; text-align: center; border: 2px solid #bbf7d0;">
                                 <div style="font-size: 32px; font-weight: 800; color: #16a34a;">${correct}</div>
                                 <div style="font-size: 12px; color: #16a34a; font-weight: 600;">MASTERED</div>
-                                <div style="font-size: 11px; color: #059669; margin-top: 4px;">${masteredPercent}% of studied</div>
+                                <div style="font-size: 12px; color: #059669; margin-top: 4px;">${masteredPercent}% of studied</div>
                             </div>
                             <div style="background: #fffbeb; padding: 20px; border-radius: 12px; text-align: center; border: 2px solid #fde68a;">
                                 <div style="font-size: 32px; font-weight: 800; color: #d97706;">${unsure}</div>
                                 <div style="font-size: 12px; color: #d97706; font-weight: 600;">REVIEW NEEDED</div>
-                                <div style="font-size: 11px; color: #b45309; margin-top: 4px;">Need more practice</div>
+                                <div style="font-size: 12px; color: #b45309; margin-top: 4px;">Need more practice</div>
                             </div>
                             <div style="background: #fef2f2; padding: 20px; border-radius: 12px; text-align: center; border: 2px solid #fecaca;">
                                 <div style="font-size: 32px; font-weight: 800; color: #dc2626;">${wrong}</div>
                                 <div style="font-size: 12px; color: #dc2626; font-weight: 600;">NEED PRACTICE</div>
-                                <div style="font-size: 11px; color: #b91c1c; margin-top: 4px;">Focus here first</div>
+                                <div style="font-size: 12px; color: #b91c1c; margin-top: 4px;">Focus here first</div>
                             </div>
                         </div>
                     </div>
@@ -8426,7 +8631,7 @@ const questions = ALL_QUESTIONS;
             document.getElementById('stats-dashboard').classList.add('hidden');
             
             const insightsEl = document.getElementById('insights-screen');
-            insightsEl.innerHTML = insightsHTML;
+            insightsEl.innerHTML = applyTypographyBaseline(insightsHTML);
             insightsEl.classList.remove('hidden');
             insightsEl.classList.add('active');
         }
@@ -8497,7 +8702,7 @@ const questions = ALL_QUESTIONS;
 
         async function syncNow({ showAlerts = false, throwOnError = false } = {}) {
             if (!cloudSync.isReady()) {
-                if (showAlerts) alert('Cloud Sync not enabled. Click “☁️ Cloud Sync” to connect.');
+                if (showAlerts) alert('Premium sync is not active. Click “🔐 Activate Premium & Sync” to connect.');
                 return false;
             }
 
@@ -8548,32 +8753,136 @@ const questions = ALL_QUESTIONS;
             }
         }
 
+        function openMockHistoryModal() {
+            const overlay = document.getElementById('mock-history-overlay');
+            if (!overlay) return;
+            overlay.classList.remove('hidden');
+        }
+
+        function closeMockHistoryModal() {
+            const overlay = document.getElementById('mock-history-overlay');
+            const status = document.getElementById('mock-history-status');
+            const list = document.getElementById('mock-history-list');
+            if (overlay) overlay.classList.add('hidden');
+            if (status) status.textContent = '';
+            if (list) list.innerHTML = '';
+        }
+
+        function renderMockHistoryLoading() {
+            const status = document.getElementById('mock-history-status');
+            const list = document.getElementById('mock-history-list');
+            if (status) status.textContent = 'Loading your latest mock checkride attempts...';
+            if (list) list.innerHTML = '';
+        }
+
+        function renderMockHistoryNotConnected() {
+            const status = document.getElementById('mock-history-status');
+            const list = document.getElementById('mock-history-list');
+            if (status) status.textContent = 'Activate premium sync to see your saved mock checkride history across devices.';
+            if (list) {
+                list.innerHTML = `
+                    <div class="mock-history-empty">
+                        Your history will appear here after you activate premium sync and complete a mock checkride.
+                        <br>
+                        <button type="button" class="mock-history-action-btn" onclick="activatePremiumFromHistory()">🔐 Activate Premium & Sync</button>
+                    </div>
+                `;
+            }
+        }
+
+        function renderMockHistoryEmpty() {
+            const status = document.getElementById('mock-history-status');
+            const list = document.getElementById('mock-history-list');
+            if (status) status.textContent = 'No synced mock attempts found yet.';
+            if (list) {
+                list.innerHTML = `
+                    <div class="mock-history-empty">
+                        Complete a mock checkride and it will show up here automatically.
+                    </div>
+                `;
+            }
+        }
+
+        function renderMockHistoryError(message) {
+            const status = document.getElementById('mock-history-status');
+            const list = document.getElementById('mock-history-list');
+            const safeMessage = String(message || 'Unknown error')
+                .replaceAll('&', '&amp;')
+                .replaceAll('<', '&lt;')
+                .replaceAll('>', '&gt;')
+                .replaceAll('"', '&quot;')
+                .replaceAll("'", '&#39;');
+            if (status) status.textContent = 'Unable to load mock history right now.';
+            if (list) {
+                list.innerHTML = `
+                    <div class="mock-history-empty">
+                        ${safeMessage}
+                    </div>
+                `;
+            }
+        }
+
+        function renderMockHistoryRows(history) {
+            const status = document.getElementById('mock-history-status');
+            const list = document.getElementById('mock-history-list');
+            if (!list) return;
+
+            if (status) {
+                status.textContent = `Showing your latest ${history.length} synced mock attempts.`;
+            }
+
+            const rowsHtml = history.map((result, idx) => {
+                const completedAt = result.completed_at || result.completedAt || Date.now();
+                const dateText = new Date(completedAt).toLocaleString();
+                const passed = Boolean(result.passed);
+                const score = Number(result.score || 0);
+                const total = Number(result.total_questions || result.totalQuestions || 0);
+                const badgeClass = passed ? 'pass' : 'fail';
+                const badgeText = passed ? 'PASS' : 'FAIL';
+                return `
+                    <div class="mock-history-item">
+                        <div>
+                            <div class="mock-history-main">Attempt ${idx + 1}: ${score}/${total}</div>
+                            <div class="mock-history-meta">${dateText}</div>
+                        </div>
+                        <span class="mock-history-badge ${badgeClass}">${badgeText}</span>
+                    </div>
+                `;
+            }).join('');
+
+            list.innerHTML = rowsHtml;
+        }
+
+        async function activatePremiumFromHistory() {
+            await connectCloudSync();
+            if (cloudSync.isReady()) {
+                await showMockHistory();
+            }
+        }
+
         async function showMockHistory() {
+            openMockHistoryModal();
+
             if (!cloudSync.isReady()) {
-                alert('Cloud Sync not enabled. Click “☁️ Cloud Sync” to connect.');
+                renderMockHistoryNotConnected();
                 return;
             }
+
+            renderMockHistoryLoading();
 
             try {
                 const history = await cloudSync.getMockHistory(10);
                 console.log('Mock Checkride History:', history);
 
                 if (!history || history.length === 0) {
-                    alert('No mock checkride history found');
+                    renderMockHistoryEmpty();
                     return;
                 }
 
-                let message = 'Your Mock Checkride History:\\n\\n';
-                history.forEach((result, idx) => {
-                    const date = new Date(result.completed_at || result.completedAt || Date.now()).toLocaleDateString();
-                    const passed = result.passed ? '✅ PASS' : '❌ FAIL';
-                    message += `${idx + 1}. ${date}: ${result.score}/${result.total_questions} - ${passed}\\n`;
-                });
-
-                alert(message);
+                renderMockHistoryRows(history);
             } catch (error) {
                 console.error('[CloudSync] Failed to get mock history:', error);
-                alert('Failed to load history: ' + (error.message || String(error)));
+                renderMockHistoryError(error.message || String(error));
             }
         }
 
