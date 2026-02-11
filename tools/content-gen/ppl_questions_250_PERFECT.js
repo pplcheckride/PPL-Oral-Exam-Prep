@@ -353,7 +353,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Personal minimums are designed to prevent plan-continuation bias. Legal vs safe: being legal doesn’t mean you have adequate margin for your experience level.",
     "cramMode": "Use pre-set minimums and hard triggers. Don’t invent minimums mid-briefing to justify going.",
     "reference": "FAA Risk Management Handbook, 14 CFR 91.103",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/risk_management_handbook | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.103"
+    "link": "https://www.faa.gov/sites/faa.gov/files/2022-06/risk_management_handbook_2A.pdf#page=31 | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.103"
   },
   {
     "id": "Q202",
@@ -369,7 +369,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "The DPE is testing self-management. Many accidents aren’t skill failures—they’re decision failures driven by attitude and pressure.",
     "cramMode": "Name the attitude, apply the antidote, and change the plan—don’t just ‘be careful.’",
     "reference": "FAA Risk Management Handbook",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/risk_management_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/2022-06/risk_management_handbook_2A.pdf#page=21"
   },
   {
     "id": "Q203",
@@ -385,7 +385,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Physiology and judgment failures are common. The DPE wants you to demonstrate you’ll cancel for yourself, not just for weather.",
     "cramMode": "IMSAFE is a go/no-go tool. If multiple factors are off, don’t fly.",
     "reference": "FAA Risk Management Handbook",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/risk_management_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/2022-06/risk_management_handbook_2A.pdf#page=13"
   },
   {
     "id": "Q204",
@@ -401,7 +401,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This tests maturity: pilots make mistakes; good pilots learn and build barriers. The DPE wants a safety-culture mindset.",
     "cramMode": "Own it, learn it, and build a fix. Consider ASRS promptly after a deviation.",
     "reference": "FAA Risk Management Handbook",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/risk_management_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/2022-06/risk_management_handbook_2A.pdf#page=13"
   },
   {
     "id": "Q17",
@@ -849,7 +849,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This tests that you can read the chart and separate ‘controlled’ from ‘communication required.’ The DPE wants you to apply the correct requirement: weather minimums and safe ops, not imaginary clearances.",
     "cramMode": "Dashed magenta = Class E to surface. No clearance/comm requirement just for Class E—meet VFR weather minimums.",
     "reference": "14 CFR 91.155, AIM (Airspace)",
-    "link": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.155 | https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html"
+    "link": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.155 | https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html"
   },
   {
     "id": "Q219",
@@ -865,7 +865,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This is classic VFR-into-IMC risk management. The DPE wants margin thinking, not minimum thinking.",
     "cramMode": "Don’t scud run. Minimums are legal limits; you need margin and outs.",
     "reference": "14 CFR 91.155, PHAK (Weather/ADM)",
-    "link": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.155 | https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.155 | https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-15-airspace"
   },
   {
     "id": "Q220",
@@ -897,7 +897,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Runway incursions often start with embarrassment. The DPE wants safe, assertive communication.",
     "cramMode": "If you can’t comply, stop and ask. Progressive taxi is normal.",
     "reference": "AIM (Taxi Procedures), 14 CFR 91.103",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.103"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.103"
   },
   {
     "id": "Q222",
@@ -913,7 +913,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This is a classic VFR-into-IMC chain. The DPE wants legal awareness plus conservative escape planning.",
     "cramMode": "VFR over-the-top can be legal but dangerous without a guaranteed VFR descent plan.",
     "reference": "14 CFR 91.155, PHAK (Weather/ADM)",
-    "link": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.155 | https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.155 | https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-15-airspace"
   },
   {
     "id": "Q223",
@@ -929,7 +929,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This is about predictability and see-and-avoid. The DPE wants you to choose the method that reduces conflict, not the one that saves time.",
     "cramMode": "Predictability wins. Use standard pattern entries and clear calls; avoid disrupting the flow.",
     "reference": "AIM (Traffic Patterns), 14 CFR 91.113",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.113"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.113"
   },
   {
     "id": "Q224",
@@ -977,7 +977,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "An alternator failure is time-limited: the battery will eventually die, taking radios, transponder, and possibly flaps/electric fuel pump (aircraft-dependent) with it. The safest time to solve an electrical problem is while you still have comms and options. The DPE wants a clear priority stack (aviate/navigate/communicate), checklist discipline, and a conservative decision.",
     "cramMode": "Low volts = time limit. Shed load, run the checklist, tell ATC early, and land while you still have radios.",
     "reference": "PHAK Chapter 8 (Electrical systems), POH",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-8-flight-instruments"
   },
   {
     "id": "Q132",
@@ -993,7 +993,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Intermittent faults are dangerous because they invite “just one more thing” troubleshooting until you’re behind the airplane. The DPE is testing whether you can prevent task saturation and still manage a system abnormal.",
     "cramMode": "Intermittent warning = still a warning. Fly the airplane, simplify, checklist, and make a conservative plan before it becomes a total failure.",
     "reference": "PHAK Chapter 2 (Risk management), PHAK Chapter 8 (Electrical)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-2-aeronautical-decision-making"
   },
   {
     "id": "Q133",
@@ -1009,7 +1009,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Battery endurance math is a planning aid, not a guarantee. Real batteries don’t behave like perfect tanks, and avionics can drop off before “zero.” The DPE wants conservative, option-preserving decisions.",
     "cramMode": "Battery math is optimistic. If charging is gone, land soon — don’t spend your margin “because the math says you can.”",
     "reference": "PHAK Chapter 8 (Electrical), POH",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-8-flight-instruments"
   },
   {
     "id": "Q134",
@@ -1025,7 +1025,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Airspeed failures are dangerous because they can drive pilots into stalls or overspeeds. The DPE wants you to recognize failure signatures and fly by known pitch/power and other cues instead of “fixing” the instrument with control inputs.",
     "cramMode": "If airspeed is suspect: don’t chase it. Fly pitch/power, use cross-checks, add pitot heat, and land.",
     "reference": "PHAK Chapter 8 (Pitot-static), AFH instrument cross-check concepts",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-8-flight-instruments"
   },
   {
     "id": "Q135",
@@ -1041,7 +1041,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Static blockages create predictable instrument errors and can persist. The DPE wants recognition + checklist + conservative planning, not random switch flipping.",
     "cramMode": "Altimeter + VSI weird together = suspect static. Use alternate static if available, fly outside, and land.",
     "reference": "PHAK Chapter 8 (Pitot-static), POH",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-8-flight-instruments"
   },
   {
     "id": "Q136",
@@ -1057,7 +1057,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Pitot icing is not an “IFR-only” failure mode. The DPE wants you to connect the environmental cues (cold + moisture) to proactive system management.",
     "cramMode": "Cold + moisture = pitot ice risk, even VFR. Turn pitot heat on early — don’t wait for the airspeed to fail.",
     "reference": "PHAK Chapter 8, Aviation Weather Handbook (Icing cues)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-8-flight-instruments"
   },
   {
     "id": "Q137",
@@ -1073,7 +1073,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Bad gyros can kill pilots who “follow the instrument into the ground.” The DPE wants you to recognize instrument failure signatures and rely on the correct instruments and outside references.",
     "cramMode": "If AI and HI both get weird and suction is low: suspect vacuum failure. Trust turn coordinator + outside, and land.",
     "reference": "PHAK Chapter 8 (Instruments), AFH instrument flying basics",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-8-flight-instruments"
   },
   {
     "id": "Q138",
@@ -1089,7 +1089,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Technology failures create workload spikes and airspace mistakes. The DPE wants to see that you can revert to basic navigation and make conservative decisions instead of fighting your tools.",
     "cramMode": "If your moving map dies: stabilize, revert to pilotage, ask ATC for help, and land to reset if you’re behind.",
     "reference": "PHAK Chapter 15 (Navigation), FAA risk management guidance",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-15-airspace"
   },
   {
     "id": "Q139",
@@ -1105,7 +1105,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Water contamination can cause engine failure, often at the worst time (takeoff/climb). The DPE wants a firm, safety-first answer: preflight is where you prevent emergencies.",
     "cramMode": "Fuel sample must be clean. If water keeps showing up, stop and fix it — don’t rationalize it.",
     "reference": "PHAK Chapter 7 (Fuel system), POH",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-7-aircraft-systems"
   },
   {
     "id": "Q140",
@@ -1121,7 +1121,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Fuel odor can precede fire. The DPE wants decisive action and a conservative landing decision, not denial.",
     "cramMode": "Strong fuel smell in flight = treat as leak/fire risk. Ventilate and land ASAP — don’t continue “to see if it goes away.”",
     "reference": "PHAK Chapter 16 (Emergency procedures), POH",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-16-navigation"
   },
   {
     "id": "Q141",
@@ -1137,7 +1137,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Many fuel-starvation accidents are “pilot forgot to manage fuel.” The DPE is testing systems discipline and prevention habits.",
     "cramMode": "Fuel starvation is usually a human-factors problem. Use a repeatable cruise check to manage selector/gauges — don’t rely on memory.",
     "reference": "PHAK Chapter 7 (Fuel), FAA risk management guidance",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-7-aircraft-systems"
   },
   {
     "id": "Q142",
@@ -1169,7 +1169,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Engine roughness is a warning. The DPE wants you to show both: correct immediate actions and conservative decision making.",
     "cramMode": "Rough engine: checklist now, then land if not resolved. Don’t spend your margin continuing toward the destination.",
     "reference": "PHAK Chapter 16 (Emergency), POH",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-16-navigation"
   },
   {
     "id": "Q144",
@@ -1185,7 +1185,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This tests correlation-level thinking: mixture affects power and cooling and depends on DA and engine type. The DPE wants you to use the POH and manage engine temps with airflow and proper settings.",
     "cramMode": "Manage high CHT with airflow first (lower nose). Mixture management is POH/DA dependent — don’t use superstition.",
     "reference": "AFH (Engine operation), POH",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/07_afh_ch6.pdf"
   },
   {
     "id": "Q145",
@@ -1201,7 +1201,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Oil pressure/temperature trends can indicate loss of lubrication — a precursor to engine seizure. The DPE wants decisive risk management: land while you have power and options.",
     "cramMode": "Oil pressure down + temp up = treat as engine failure in progress. Land at the nearest suitable airport while you still can.",
     "reference": "PHAK Chapter 16 (Engine failures), POH",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-16-navigation"
   },
   {
     "id": "Q146",
@@ -1217,7 +1217,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Overspeed can damage the engine/prop and becomes an emergency if it can’t be controlled. The DPE wants checklist discipline and conservative landing decisions.",
     "cramMode": "Uncommanded RPM rise in a constant-speed prop is not normal. Reduce power, use checklist, and land ASAP.",
     "reference": "AFH (Constant-speed prop concepts), POH",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/07_afh_ch6.pdf"
   },
   {
     "id": "Q147",
@@ -1233,7 +1233,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This tests whether you understand the systems on *this* aircraft instead of memorizing one answer. The DPE wants correct, aircraft-appropriate actions based on the POH.",
     "cramMode": "Know your engine type. Carb ice fixes don’t apply to every airplane. Use the POH checklist and the correct system controls.",
     "reference": "PHAK Chapter 7 (Engines), POH",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-7-aircraft-systems"
   },
   {
     "id": "Q148",
@@ -1249,7 +1249,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Trim can create control forces that exceed your ability at slow speeds. The DPE wants to see that you manage airspeed and configuration to keep the airplane controllable.",
     "cramMode": "Trim problems are control problems. Use airspeed and configuration to keep forces manageable and land safely — don’t get slow and fight it.",
     "reference": "AFH (Flight controls/trim), POH",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/04_afh_ch3.pdf"
   },
   {
     "id": "Q149",
@@ -1265,7 +1265,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Configuration failures increase workload and can cause unstable approaches. The DPE is evaluating whether you can slow down the situation and pick a runway and profile with margin.",
     "cramMode": "Flap failure: stabilize, checklist, longer runway, higher speed, and a long stabilized approach. Don’t force a tight landing.",
     "reference": "AFH (Flap effects/landings), POH",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/09_afh_ch8.pdf"
   },
   {
     "id": "Q150",
@@ -1281,7 +1281,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Doors open frequently and rarely affect controllability. The killer is loss of control from distraction. The DPE expects “aviate first” and good passenger management.",
     "cramMode": "Door open is usually a distraction, not a flight-control emergency. Fly the airplane, keep the pattern, and land — don’t fixate.",
     "reference": "PHAK Chapter 2 (Risk management), POH",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-2-aeronautical-decision-making"
   },
   {
     "id": "Q151",
@@ -1297,7 +1297,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Circuit breakers protect wiring. Repeated resets can turn a manageable failure into a fire. The DPE wants disciplined system management under pressure.",
     "cramMode": "Breaker pops: one cautious reset max (per POH). If it pops again, leave it out — don’t trade a nuisance for a fire.",
     "reference": "PHAK Chapter 8 (Electrical), POH",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-8-flight-instruments"
   },
   {
     "id": "Q152",
@@ -1329,7 +1329,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Some lights improve conspicuity but can degrade visibility in moisture. The DPE wants practical safety thinking: avoid conditions that cause disorientation and manage lighting appropriately.",
     "cramMode": "If strobes reflect and ruin your cues, turn them off and fly out of the layer. Conspicuity doesn’t matter if you can’t see.",
     "reference": "PHAK (Night flying/spatial disorientation), FAA Risk Management Handbook",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-17-aeromedical-factors"
   },
   {
     "id": "Q154",
@@ -1361,7 +1361,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Electrical smoke/fire is time-critical. The DPE wants priorities: fly, eliminate the source, land. Fire troubleshooting is not a “keep flying to destination” event.",
     "cramMode": "Smoke/fire: fly the airplane, checklist, shut down the source, ventilate, declare, and land ASAP. Don’t troubleshoot deeply in the air.",
     "reference": "PHAK Chapter 16 (Emergency), POH",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-16-navigation"
   },
   {
     "id": "Q156",
@@ -1441,7 +1441,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Degraded accuracy can become dangerous quickly when combined with workload. The DPE wants you to recognize “abnormal but not failed” as still a reason to simplify and land.",
     "cramMode": "“Sort of wrong” instruments are still wrong. Simplify the flight and land to fix it — don’t stack complexity on top of bad data.",
     "reference": "PHAK Chapter 8, POH",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-8-flight-instruments"
   },
   {
     "id": "Q161",
@@ -1457,7 +1457,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Visibility is non-negotiable, and fog can worsen quickly in climb. The DPE wants conservative decision making and a willingness to delay rather than “try it.”",
     "cramMode": "If you can’t see, you don’t fly. Fix windshield fog on the ground; if it won’t stay clear, it’s a no-go.",
     "reference": "PHAK (Weather/operations), AFH operational safety concepts",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-12-weather-theory"
   },
   {
     "id": "Q162",
@@ -1473,7 +1473,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "CO poisoning is insidious and can incapacitate. The DPE wants immediate mitigation actions and a conservative landing decision.",
     "cramMode": "Headache + exhaust smell + heat on = suspect CO. Ventilate, heat off, oxygen if available, and land.",
     "reference": "PHAK aeromedical factors, FAA Risk Management Handbook",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-17-aeromedical-factors"
   },
   {
     "id": "Q163",
@@ -1489,7 +1489,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Autopilot failures often happen at the worst time. The DPE wants you to show that you maintain basic control skills and don’t let automation create complacency.",
     "cramMode": "Autopilot is optional; hand-flying is required. If it disconnects, fly first, then troubleshoot. Don’t use automation to hide poor basic control.",
     "reference": "FAA Risk Management Handbook, AFH automation concepts",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation"
+    "link": "https://www.faa.gov/sites/faa.gov/files/2022-06/risk_management_handbook_2A.pdf#page=10"
   },
   {
     "id": "Q164",
@@ -1505,7 +1505,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Overvoltage can damage avionics and overheat wiring. The DPE wants immediate decisive action and a landing plan, not denial.",
     "cramMode": "Electrical burning smell/overvoltage cues = checklist now, isolate power, and land ASAP. Don’t keep feeding a fire risk.",
     "reference": "PHAK Chapter 8 (Electrical), POH",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-8-flight-instruments"
   },
   {
     "id": "Q165",
@@ -1585,7 +1585,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "The POH's \"maximum demonstrated crosswind\" is the highest crosswind in which the aircraft was tested during certification. It's not a hard limit, but it's the manufacturer's tested boundary. More importantly, gusting winds create additional challenges - the 18-gusting-25 means wind varies rapidly, requiring constant control inputs. A 20-knot crosswind gust is extremely challenging even for experienced pilots and exceeds what the aircraft was demonstrated to handle. You also need to consider your personal experience - you've never landed in more than 10 knots, so 20 knots gusting is way beyond your proficiency. Request Runway 25L/R (heading 251 - more aligned with 120-degree winds) or divert to Deer Valley (KDVT) or Scottsdale (KSDL). Recognize personal limitations.",
     "cramMode": "Demonstrated crosswind = manufacturer's tested limit. Gusting winds are more challenging. Know personal limits - don't exceed experience level.",
     "reference": "POH Section 2, PHAK Chapter 9",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-9-flight-manuals-and-other-documents"
   },
   {
     "id": "Q55",
@@ -1617,7 +1617,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Overnight radiation cooling creates temperature inversions where cool air is trapped near the surface under a layer of warmer air. This traps moisture near the ground, forming fog (mist when visibility is 5/8 mile to 6 miles). The METAR shows classic radiation fog symptoms: calm winds (00000KT), temperature/dewpoint spread of only 1°C (very high humidity), and mist reducing visibility to 2 miles with low overcast at 300 feet. As the sun rises, surface heating breaks the inversion - warm air rises, fog lifts and dissipates. This typically improves by 2-3 hours after sunrise. Wait until 8-9 AM and conditions will likely be VFR. Check updated METARs and TAFs for timing. This is predictable, improvable weather - not a frontal system or persistent IFR.",
     "cramMode": "Radiation fog forms overnight with calm winds and clear skies. Temperature inversion traps cool air and moisture. Burns off 2-3 hours after sunrise as surface heats.",
     "reference": "AC 00-6B, PHAK Chapter 12",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-12-weather-theory"
   },
   {
     "id": "Q57",
@@ -1729,7 +1729,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Wind shear is dangerous because it can change faster than you can correct—especially near the ground. Microbursts and gust fronts can exist without a dramatic-looking storm over the field, and the worst shear can be outside the rain shaft. “Adding a little airspeed” is not a cure for a sudden headwind-to-tailwind transition at 200 feet AGL. Good ADM is recognizing the combination of cues (LLWS advisory, gusts, nearby convection, multiple go-arounds) and choosing to avoid the environment entirely.",
     "cramMode": "LLWS + gusts + nearby storms + go-arounds = treat as microburst risk. Don’t “try one” in a trainer—go around/divert early.",
     "reference": "Aviation Weather Handbook (Wind Shear/Microbursts), PHAK Chapter 12",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation"
+    "link": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28A_FAA_Web.pdf#page=41"
   },
   {
     "id": "Q64",
@@ -1793,7 +1793,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "A ceiling is only defined when you can see a cloud layer. When the sky is obscured (fog/heavy precip), the report switches to vertical visibility (VV), which often indicates truly poor conditions and low confidence about where you’ll break out. BR vs FG matters because it’s a cue about *severity and persistence*. Treating all “low and gray” reports as equivalent leads to bad decisions like launching into an environment where the ceiling/vis is not just low—it’s undefined and can easily go to zero. Even if you’re IFR-rated, you use these cues to decide whether conditions are improving or degrading.",
     "cramMode": "BR = mist (less severe). FG = fog (worse). OVC is a measured ceiling; VV means sky obscured/indefinite ceiling—often the nastiest.",
     "reference": "AC 00-45H (Aviation Weather Services), Aviation Weather Handbook (METARs)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation"
+    "link": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28A_FAA_Web.pdf#page=139"
   },
   {
     "id": "Q68",
@@ -1825,7 +1825,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Mountain wave can produce vertical air movement that exceeds the climb capability of a light trainer, plus rotor can be violent and unpredictable. Lenticular clouds are a big visual clue that the atmosphere is organized into waves. “VFR” only tells you about visibility/ceilings—not the vertical winds and turbulence that can make the flight unsafe. Good ADM is recognizing the cues and not flying a low-powered airplane into an environment where terrain + strong winds aloft can pin you down.",
     "cramMode": "Lenticulars + strong winds aloft = mountain wave risk. Rotor on lee side can be brutal. VFR doesn’t mean smooth or safe.",
     "reference": "Aviation Weather Handbook (Mountain waves), PHAK Chapter 12",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation"
+    "link": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28A_FAA_Web.pdf#page=121"
   },
   {
     "id": "Q70",
@@ -1873,7 +1873,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Cold fronts can change conditions in minutes, not hours. The visual picture often lags the operational hazard—gust fronts and wind shifts can arrive before the rain. If you’re near pattern altitude when winds flip and gust, your workload spikes exactly when your margin is small. Good ADM means recognizing that “I can always turn back” is a weak plan if the front crosses behind you and closes your return route.",
     "cramMode": "Cold front = fast changes: wind shift + gusts + turbulence + quick MVFR/IFR. “Turn back” may not be available once it moves through.",
     "reference": "AC 00-45H (Aviation Weather Services), Aviation Weather Handbook (Fronts)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation"
+    "link": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28A_FAA_Web.pdf#page=139"
   },
   {
     "id": "Q73",
@@ -1905,7 +1905,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Local boundaries can generate convection faster than the big-picture forecast suggests. The first sign is often a line of building cumulus and a wind shift. If you wait until you “see lightning,” you’re late—gust fronts and turbulence can arrive earlier. Good ADM is anticipating that summer coastal environments can go from smooth to ugly within an hour and planning conservative turn-around points.",
     "cramMode": "Sea breeze boundary can rapidly trigger storms and gusty wind shifts. Coastal VFR can change fast—plan turn-around points early.",
     "reference": "Aviation Weather Handbook (Local winds/boundaries), PHAK Chapter 12",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation"
+    "link": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28A_FAA_Web.pdf#page=12"
   },
   {
     "id": "Q75",
@@ -1969,7 +1969,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Carb ice can form at surprisingly warm temperatures when humidity is high—especially during low-power operations. Misdiagnosing it wastes time while the engine continues losing power. Correct, timely use of carb heat is a core weather-and-systems crossover skill for checkrides: recognize the conditions and fix the problem immediately.",
     "cramMode": "Warm + humid + low power = carb ice risk. Rough engine/RPM drop in descent? Carb heat first.",
     "reference": "PHAK Chapter 7 (Engines/Carb ice), POH",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-7-aircraft-systems"
   },
   {
     "id": "Q79",
@@ -1985,7 +1985,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "In mountain/valley environments, small errors compound with stress and reduced margins. GPS altitude isn’t a substitute for proper instrument setup in normal operations, and not every GPS altitude is baro-corrected. The core checkride lesson is disciplined procedures: update altimeter settings when available, cross-check, and protect terrain clearance.",
     "cramMode": "High to low, look out below. Big pressure drops + no reset = you’re lower than you think—dangerous near terrain.",
     "reference": "PHAK Chapter 8 (Altimeter), AIM altimeter procedures",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-8-flight-instruments"
   },
   {
     "id": "Q80",
@@ -2017,7 +2017,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "The danger isn’t the rain—it’s the vertical wind and outflow. Virga is a visual cue that the atmosphere is primed for strong downdrafts. Light aircraft are especially vulnerable near the ground when the wind changes faster than you can correct. Good ADM is recognizing the cue and refusing to “time it.”",
     "cramMode": "Virga = evaporative cooling = downdraft/outflow risk. No rain on the ground doesn’t mean no microburst hazard.",
     "reference": "Aviation Weather Handbook (Thunderstorms/Microbursts)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation"
+    "link": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28A_FAA_Web.pdf#page=93"
   },
   {
     "id": "Q82",
@@ -2081,7 +2081,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Fog formation can be predictable when the ingredients align: high humidity (T/Td close), light winds, and nocturnal cooling. Many “unexpected fog” stories are actually “ignored trend” stories. Good ADM uses trends to protect against getting trapped after dark when options are fewer.",
     "cramMode": "T/Td closing fast + light winds + clear sky near sunset = fog risk. Trends beat snapshots—plan alternates and return early.",
     "reference": "AC 00-45H (Aviation Weather Services), Aviation Weather Handbook (Fog)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation"
+    "link": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28A_FAA_Web.pdf#page=139"
   },
   {
     "id": "Q86",
@@ -2097,7 +2097,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Different fog types behave differently. Advection fog can be stubborn because the mechanism isn’t overnight cooling—it’s ongoing moisture transport and cooling. Treating all fog like “morning fog” leads to bad planning and time pressure.",
     "cramMode": "Coastal advection fog can persist all day if onshore flow continues. Don’t use “it’ll burn off by noon” as a plan.",
     "reference": "Aviation Weather Handbook (Fog types), PHAK Chapter 12",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation"
+    "link": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28A_FAA_Web.pdf#page=63"
   },
   {
     "id": "Q87",
@@ -2113,7 +2113,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Terrain can create micro-weather. A route that looks easy from the ramp can become a narrowing corridor with lowering bases as you approach the slope. Good ADM includes terrain-aware weather thinking: “What happens as the terrain forces lift?”",
     "cramMode": "Upslope wind = forced lift = cooling/condensation = lower ceilings near terrain. VFR can deteriorate fast as you approach foothills/passes.",
     "reference": "Aviation Weather Handbook (Orographic effects), PHAK Chapter 12",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation"
+    "link": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28A_FAA_Web.pdf#page=12"
   },
   {
     "id": "Q88",
@@ -2193,7 +2193,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Misreading ceilings leads to bad decisions—either unnecessary cancellations or unsafe launches. The DPE is checking whether you understand what limits you operationally. Ceiling definitions matter for planning and for understanding what “marginal” actually is.",
     "cramMode": "Ceiling = lowest BKN/OVC/VV layer. FEW/SCT aren’t ceilings.",
     "reference": "AC 00-45H (Aviation Weather Services), Aviation Weather Handbook (METAR decode)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation"
+    "link": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28A_FAA_Web.pdf#page=139"
   },
   {
     "id": "Q93",
@@ -2241,7 +2241,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Terrain converts wind into vertical motion and turbulence. In a trainer, that can be a control and energy-management problem close to the ground. A DPE expects you to connect winds aloft + terrain to real operational risk.",
     "cramMode": "Strong winds aloft + terrain = turbulence/shear near the surface. Surface wind alone can hide the real risk—plan for lee-side rotor and go-around early.",
     "reference": "Aviation Weather Handbook (Turbulence/mountain effects), PHAK Chapter 12",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation"
+    "link": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28A_FAA_Web.pdf#page=121"
   },
   {
     "id": "Q96",
@@ -2289,7 +2289,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Different icing types imply different droplet sizes and accumulation behavior. Clear ice can overwhelm the aircraft quickly and is harder to see early. Checkrides want you to connect the observation to action: don’t debate the taxonomy—get out of it.",
     "cramMode": "Rime = rough/opaque; clear = smooth/heavy and often worse. In non-FIKI: any ice = exit now.",
     "reference": "Aviation Weather Handbook (Icing), PHAK weather guidance",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation"
+    "link": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28A_FAA_Web.pdf#page=111"
   },
   {
     "id": "Q99",
@@ -2481,7 +2481,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "XC planning isn’t just “pick a line.” Wind correction keeps you on course and groundspeed drives fuel/time decisions. Many pilots get behind the airplane because they didn’t plan a realistic groundspeed and then discover late that they’re burning daylight/fuel margin.",
     "cramMode": "Plan both: WCA keeps you on course; head/tailwind drives ETA. If crosswind is ~15% of TAS, expect ~9° correction.",
     "reference": "PHAK Chapter 15 (Navigation), AFH cross-country planning concepts",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-15-airspace"
   },
   {
     "id": "Q103",
@@ -2513,7 +2513,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Many fatal high-DA accidents start with a normal-looking takeoff roll followed by a mushy climb into terrain. The checkride is looking for the connection: DA affects *both* takeoff distance and climb capability, and terrain makes climb margin the limiting factor.",
     "cramMode": "High DA = worse takeoff AND worse climb. Runway length doesn’t guarantee obstacle clearance — performance margin does.",
     "reference": "PHAK Chapter 10 (Aircraft Performance), AFH performance principles",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-10-weight-and-balance"
   },
   {
     "id": "Q105",
@@ -2529,7 +2529,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Takeoff performance numbers are not guarantees; they assume precise technique and no surprises. Real-world factors (tailwind, slope, surface, pilot technique, engine health) can push actual performance beyond planned. A DPE wants conservative judgment: if a small error makes you hit trees, it’s a no-go.",
     "cramMode": "If it “barely works on paper,” it doesn’t work. Performance planning needs margin for technique + conditions + uncertainty.",
     "reference": "AFH (Takeoff/Performance), PHAK Chapter 10",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/11_afh_ch10.pdf"
   },
   {
     "id": "Q106",
@@ -2545,7 +2545,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Tailwind and wet runway are classic “silent multipliers.” Many runway overruns occur when pilots rely on best-case numbers while conditions degrade the stopping margin. A DPE wants the conservative decision: choose the runway that gives you the most margin, not the one that’s convenient.",
     "cramMode": "Wet + tailwind eats landing margin fast. If the numbers are tight in ideal conditions, they’re not safe in degraded conditions.",
     "reference": "PHAK Chapter 10, AFH (Landing performance)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-10-weight-and-balance"
   },
   {
     "id": "Q107",
@@ -2561,7 +2561,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "W&B isn’t a paperwork exercise — CG location changes how the airplane flies and how much runway you need. The DPE wants you to connect envelope legality to operational consequences.",
     "cramMode": "Forward CG = harder rotate/flare + longer takeoff/landing. Legal inside envelope can still reduce safety margin.",
     "reference": "PHAK Chapter 10 (Weight & Balance), AFH",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-10-weight-and-balance"
   },
   {
     "id": "Q108",
@@ -2577,7 +2577,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "In a light aircraft, a human moving a few feet can meaningfully shift CG. Aft CG reduces longitudinal stability and increases the risk of loss of control, especially at slow speeds. The DPE wants to hear that you manage passengers and keep the airplane within safe limits for the whole flight.",
     "cramMode": "Passengers don’t roam. Weight shifts can change CG and stability fast. Keep belts on and people seated — comfort gets handled on the ground.",
     "reference": "PHAK Chapter 10, AFH (Passenger management concepts)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-10-weight-and-balance"
   },
   {
     "id": "Q109",
@@ -2593,7 +2593,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Obstacle clearance is about climb *gradient*, not just a number on the VSI. High DA and weight reduce climb, and wind changes groundspeed. A DPE wants to see you convert climb performance into a real obstacle decision.",
     "cramMode": "Climb gradient = (FPM) / (NM per minute). If you can’t out-climb terrain on paper with margin, don’t launch.",
     "reference": "PHAK Chapter 10 (Performance), AFH climb performance principles",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-10-weight-and-balance"
   },
   {
     "id": "Q110",
@@ -2737,7 +2737,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This tests correlation-level thinking: performance isn’t one number. The DPE wants to see that you can identify a new risk created by a “good” decision (weight reduction) and manage both.",
     "cramMode": "Weight down usually helps, but CG matters. Forward CG can make rotate/flare harder and lengthen takeoff/landing — manage both weight and CG.",
     "reference": "PHAK Chapter 10, AFH performance concepts",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-10-weight-and-balance"
   },
   {
     "id": "Q119",
@@ -2753,7 +2753,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Mixture mismanagement is a performance killer at DA. The DPE wants to hear that you understand why power is reduced at altitude and that you use POH-based technique rather than superstition.",
     "cramMode": "High DA + full rich can rob power. Use POH leaning technique for best power at high-elevation takeoffs.",
     "reference": "AFH (Engine operation/mixture), POH procedures",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/07_afh_ch6.pdf"
   },
   {
     "id": "Q120",
@@ -2817,7 +2817,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Runway incursions happen on the ground, often due to rushing and assuming. The DPE wants disciplined taxi: read back hold short instructions, stop at the correct marking, and never “creep” across a runway hold line. Legal vs safe: even if you think you can stop quickly, crossing a hold line without clearance is both unsafe and potentially a violation depending on what you were cleared to do.",
     "cramMode": "Hold short means hold short. Stop at the runway hold line unless cleared to cross. ILS critical area is separate and requires specific instruction.",
     "reference": "AIM (Airport Marking Aids and Signs)",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html"
   },
   {
     "id": "Q45",
@@ -2833,7 +2833,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Many runway incursions start with “it looked clear.” The checkride is testing disciplined surface ops: stop, ask, and comply with clearances—especially at night when depth perception and closure rates are worse. Legal vs safe: being right visually doesn’t replace a clearance and doesn’t protect you from an aircraft you didn’t see.",
     "cramMode": "On the surface: stop when unsure, ask ATC, and never assume a runway is yours because it looks clear.",
     "reference": "AIM (Runway Incursion Avoidance)",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html"
   },
   {
     "id": "Q46",
@@ -2849,7 +2849,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Non-towered operations depend on communication and sequencing. The DPE wants you to prioritize collision avoidance and right-of-way, not ego or impatience. Legal vs safe: even if you could technically back-taxi quickly, the safe answer is to avoid creating a conflict with an aircraft on final.",
     "cramMode": "Back-taxi = runway time. Clear, announce, and don’t enter with traffic on short final.",
     "reference": "AIM (Non-Towered Airport Operations)",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html"
   },
   {
     "id": "Q47",
@@ -2865,7 +2865,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This is a classic DPE surface-ops trap: correct readback and restraint. The safe/legal line is strict: runway entry only as cleared, and takeoff only with an explicit takeoff clearance at a towered airport.",
     "cramMode": "Line up and wait = enter runway and hold. Takeoff requires a separate takeoff clearance.",
     "reference": "AIM (ATC Phraseology)",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html"
   },
   {
     "id": "Q48",
@@ -2881,7 +2881,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Runway closures are safety-critical. The DPE wants you to show PIC responsibility: stop, verify, and resolve the conflict before moving into a hazard area. Legal vs safe: even with a clearance, operating on a closed surface can be unsafe and may violate local restrictions/NOTAMs.",
     "cramMode": "Yellow X = closed. Stop and clarify any conflict; PIC is still responsible.",
     "reference": "AIM (Airport Markings/NOTAMs), 14 CFR 91.103",
-    "link": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.103 | https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html"
+    "link": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.103 | https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html"
   },
   {
     "id": "Q49",
@@ -2897,7 +2897,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Hot spots are there because pilots have made mistakes there. The DPE is testing whether you use the airport diagram proactively and can manage workload on the ground.",
     "cramMode": "Hot spot = slow down, brief, verify, and ask if unsure. Taxi is a phase of flight.",
     "reference": "AIM (Hot Spots/Airport Diagrams), FAA Airport Diagram Symbology",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html"
   },
   {
     "id": "Q50",
@@ -2913,7 +2913,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "At night, misidentifying a runway is a real hazard. The DPE wants practical cross-checks (heading, diagram, visual cues) rather than guessing based on one cue.",
     "cramMode": "Night runway ID: verify heading, diagram, and cues. REIL helps identify the runway end; it doesn’t mean closed.",
     "reference": "AIM (Airport Lighting Aids), PHAK (Airport Operations)",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html | https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html | https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-14-airport-operations"
   },
   {
     "id": "Q214",
@@ -2929,7 +2929,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Runway incursions often happen when pilots rely on one cue or rush. The DPE wants you to recognize runway-approach cues (lights, signs, markings) and default to stopping unless you have an explicit clearance.",
     "cramMode": "Runway guard lights = runway nearby. Slow down, verify, and stop at the hold-short line unless cleared.",
     "reference": "AIM (Runway Incursion Avoidance, Airport Lighting/Markings), PHAK (Airport Ops)",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html | https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html | https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-14-airport-operations"
   },
   {
     "id": "Q215",
@@ -2945,7 +2945,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Surface ops are an ACS special emphasis area because incursions happen fast. The DPE wants you to show you can decode signs quickly and default to stopping at mandatory signs/hold-short markings.",
     "cramMode": "Red/white = mandatory (stop/hold). Yellow/black = guidance (where you are/where to go).",
     "reference": "AIM (Airport Signs and Markings), PHAK (Airport Ops)",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html | https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html | https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-14-airport-operations"
   },
   {
     "id": "Q216",
@@ -2961,7 +2961,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This is a classic checkride item: runway markings communicate structural/obstacle constraints. The DPE wants you to respect the landing threshold and use declared distances instead of improvising.",
     "cramMode": "Displaced threshold: don’t land before the threshold in that direction. Use markings + declared distances to know what’s usable.",
     "reference": "AIM (Runway Markings/Declared Distances), PHAK (Airport Ops)",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html | https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html | https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-14-airport-operations"
   },
   {
     "id": "Q217",
@@ -2977,7 +2977,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Wrong-surface taxi events are often a pride/pressure problem. The DPE wants you to demonstrate you’ll ask early and stop rather than improvise on the ground.",
     "cramMode": "Slow down, stop if needed, and ask for progressive taxi or a repeat. Don’t guess on the surface.",
     "reference": "AIM (Progressive Taxi / Surface Movement), PHAK (Airport Ops/Risk)",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html | https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html | https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-14-airport-operations"
   },
   {
     "id": "Q218",
@@ -2993,7 +2993,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Incursions don’t require speed—they require distraction. The DPE wants a disciplined rule that prevents ‘rolling while thinking’ near runways.",
     "cramMode": "If you need to go heads-down, stop. Use a sterile taxi mindset near runways—eyes outside first.",
     "reference": "AIM (Runway Incursion Avoidance), PHAK (Airport Ops/Risk)",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html | https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html | https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-14-airport-operations"
   },
   {
     "id": "Q248",
@@ -3009,7 +3009,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "At night, wrong-surface events happen when pilots rush and rely on one cue. The DPE wants disciplined verification and willingness to stop.",
     "cramMode": "Night taxi: slow down, use diagram/signs, and stop if unsure—don’t guess.",
     "reference": "AIM (Airport Lighting/Markings), PHAK (Airport Ops)",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html | https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html | https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-14-airport-operations"
   },
   {
     "id": "Q249",
@@ -3025,7 +3025,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Misunderstood runway crossings are a major incursion cause. The DPE wants you to show you’ll force clarity rather than assume.",
     "cramMode": "Crossing a runway requires an explicit clearance. Read back hold short/crossing instructions every time.",
     "reference": "AIM (Runway Incursion Avoidance), 14 CFR 91.129",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.129"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.129"
   },
   {
     "id": "Q250",
@@ -3041,7 +3041,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Controllers request; pilots decide. The DPE wants you to show you won’t trade control for courtesy.",
     "cramMode": "If you can’t safely make an exit, say ‘unable’ and take the next one.",
     "reference": "AIM (Taxi/Runway Safety), PHAK (Airport Ops)",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html | https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html | https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-14-airport-operations"
   },
   {
     "id": "Q123",
@@ -3057,7 +3057,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "The risk is drifting into airspace, terrain, or fuel trouble while denial builds. The DPE wants early admission and structured recovery, not hoping it fixes itself.",
     "cramMode": "Lost? Stabilize + climb + communicate early. Don’t delay the confession—fix it before it becomes an emergency.",
     "reference": "PHAK (Navigation), AIM (Radar Services/VFR Advisories)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak | https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-16-navigation | https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap4_section_1.html"
   },
   {
     "id": "Q124",
@@ -3073,7 +3073,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This tests regulatory precision: IFR has specific VOR check requirements, VFR doesn’t—yet ADM still says don’t blindly trust a nav source. Legal vs safe can differ.",
     "cramMode": "VOR check is an IFR requirement. VFR: not required, but verify equipment before you bet the flight on it.",
     "reference": "AIM (VOR Checks)",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap1_section_1.html"
   },
   {
     "id": "Q125",
@@ -3089,7 +3089,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This is about automation complacency. The DPE wants you to show you’re still navigating with the big picture: airspace, terrain, fuel, outs—while using GPS to assist.",
     "cramMode": "GPS helps, but you still plan: chart review, checkpoints, altitude, and outs. Don’t let direct-to erase situational awareness.",
     "reference": "PHAK (Navigation/Risk Management), AIM (GPS Basics)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak | https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-16-navigation | https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap1_section_1.html"
   },
   {
     "id": "Q126",
@@ -3105,7 +3105,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Pilotage is great until it isn’t. The DPE wants you to demonstrate redundancy and conservative decision-making as visibility trends down.",
     "cramMode": "Use layers: pilotage + DR + nav aids. If visibility is trending down, divert early—don’t press.",
     "reference": "PHAK (Navigation), 14 CFR 91.103",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.103"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-16-navigation | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.103"
   },
   {
     "id": "Q127",
@@ -3121,7 +3121,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Over a longer leg, ‘small’ errors become big. The DPE wants you to show you understand the chain: True course → magnetic course → wind-corrected heading.",
     "cramMode": "True on the chart, magnetic in the cockpit. Apply variation, then wind correction, then fly the heading.",
     "reference": "PHAK (Navigation)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-16-navigation"
   },
   {
     "id": "Q128",
@@ -3137,7 +3137,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This is a classic VOR trap. The DPE wants you to understand the geometry, not just twist knobs: radials are FROM; TO/FROM matters.",
     "cramMode": "Radials are FROM the station. To go TO, use the reciprocal course with a TO indication.",
     "reference": "AIM (VOR), PHAK (Navigation)",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html | https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap1_section_1.html | https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-16-navigation"
   },
   {
     "id": "Q129",
@@ -3153,7 +3153,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Understanding what the instrument is really telling you prevents bad decisions (like ‘chasing’ a distance number).",
     "cramMode": "Overhead doesn’t mean ‘0.0’—slant range includes altitude.",
     "reference": "AIM (DME/GPS Basics)",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap1_section_1.html"
   },
   {
     "id": "Q130",
@@ -3169,7 +3169,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Diversions are where situational awareness collapses. The DPE wants you to show you can still do basic time/fuel/heading thinking under stress.",
     "cramMode": "Divert = turn + time/fuel/ETA check + airspace/terrain check + communicate. GPS assists, it doesn’t replace judgment.",
     "reference": "PHAK (Navigation), 14 CFR 91.103",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.103"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-16-navigation | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.103"
   },
   {
     "id": "Q241",
@@ -3185,7 +3185,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Terrain clearance is a leading risk in mountains. The DPE wants you to show you can extract practical planning data from the sectional, not just look at airspace rings.",
     "cramMode": "Use MEF/spot elevations for terrain, and plan comms/frequencies before you need them.",
     "reference": "PHAK (Navigation), 14 CFR 91.103",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.103"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-16-navigation | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.103"
   },
   {
     "id": "Q242",
@@ -3201,7 +3201,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This tests understanding of heading vs course vs track. The DPE wants controlled corrections, not needle-chasing.",
     "cramMode": "Course number isn’t a heading. Track with wind correction and small, patient corrections.",
     "reference": "PHAK (Navigation), AIM (VOR)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak | https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-16-navigation | https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap1_section_1.html"
   },
   {
     "id": "Q243",
@@ -3217,7 +3217,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Diversions fail when pilots choose an unsuitable field in a hurry. The DPE wants you to show you can do a quick suitability screen.",
     "cramMode": "Nearest is a starting point. Check runway, wind, terrain, airspace, and services before committing.",
     "reference": "PHAK (Navigation/ADM), 14 CFR 91.103",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.103"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-16-navigation | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.103"
   },
   {
     "id": "Q244",
@@ -3233,7 +3233,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Chasing the compass leads to poor control and disorientation. The DPE wants you to understand the tool’s limits and use it correctly.",
     "cramMode": "Don’t chase the compass. Use DG/GPS/outside, then re-check compass in steady, level flight.",
     "reference": "PHAK (Navigation)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-16-navigation"
   },
   {
     "id": "Q245",
@@ -3249,7 +3249,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "DPEs like proactive use of resources. Asking early prevents airspace violations and reduces workload.",
     "cramMode": "Call early. Position check and vectors are normal—don’t wait until you’re lost.",
     "reference": "AIM (Radar Services), 14 CFR 91.103",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.103"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap4_section_1.html | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.103"
   },
   {
     "id": "Q246",
@@ -3265,7 +3265,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Poor checkpoints create uncertainty and lead to ‘confidently lost.’ The DPE wants practical pilotage habits that reduce workload.",
     "cramMode": "Pick big, unique, easy-to-see checkpoints spaced by time—not tiny features you’ll miss.",
     "reference": "PHAK (Navigation), 14 CFR 91.103",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.103"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-16-navigation | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.103"
   },
   {
     "id": "Q247",
@@ -3281,7 +3281,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This tests layered planning. The DPE wants to see you can continue safely without one tool—and can choose to divert if workload becomes unsafe.",
     "cramMode": "Plan in layers so a GPS failure is inconvenient, not dangerous. Divert if complexity exceeds your comfort.",
     "reference": "PHAK (Navigation/Risk), AIM (Radar Services)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak | https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-16-navigation | https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap4_section_1.html"
   },
   {
     "id": "Q166",
@@ -3297,7 +3297,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This is a base-to-final killer: pilots steepen the turn and sometimes add rudder, increasing AoA and load factor, then stall/spin close to the ground. The DPE wants correlation-level understanding, not a memorized stall speed.",
     "cramMode": "Steeper turn = higher load factor = higher stall speed (stall speed scales with √G). Pattern is no place for steep saves.",
     "reference": "AFH (Stalls/accelerated stalls), PHAK Chapter 5 (Aerodynamics)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/06_afh_ch5.pdf"
   },
   {
     "id": "Q167",
@@ -3313,7 +3313,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "The DPE is testing judgment, not bravado. “Saving it” is where stalls/spins happen. A professional pilot chooses the go-around early.",
     "cramMode": "Overshoot final? Don’t steepen to save it — go around. Low altitude + steep turn = stall/spin setup.",
     "reference": "AFH (Approach/stabilized approach concepts), PHAK aerodynamics",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/09_afh_ch8.pdf"
   },
   {
     "id": "Q168",
@@ -3329,7 +3329,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "The DPE is testing whether you understand the aerodynamic reason behind the base-to-final stall/spin accident pattern: skidding turns at low altitude.",
     "cramMode": "Inside rudder to “tighten” base-to-final = skid = spin setup. Fix with AoA reduction and go around.",
     "reference": "AFH (Spins), PHAK Chapter 5",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/06_afh_ch5.pdf"
   },
   {
     "id": "Q169",
@@ -3345,7 +3345,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "The DPE wants to see stall recovery fundamentals: AoA is the root cause. Adding aileron at/near the stall can worsen the wing drop.",
     "cramMode": "Wing drop near stall = one wing stalled first. Fix AoA first, then coordinate. Don’t aileron-fight a stalled wing.",
     "reference": "AFH (Stall recognition/recovery), PHAK Chapter 5",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/06_afh_ch5.pdf"
   },
   {
     "id": "Q170",
@@ -3361,7 +3361,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This tests correlation-level understanding: performance and stability trade off. Aft CG can make the airplane more sensitive and less forgiving.",
     "cramMode": "Aft CG may feel better but reduces stability and can worsen stall/spin recovery. Legal ≠ forgiving.",
     "reference": "PHAK Chapter 10 (Weight & Balance), AFH stability basics",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-10-weight-and-balance"
   },
   {
     "id": "Q171",
@@ -3377,7 +3377,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This tests stabilized approach discipline and understanding of ground effect. A DPE expects you to go around rather than salvage an unstable landing.",
     "cramMode": "Fast in ground effect = long float. Don’t force it down — go around if you’re not landing in your zone.",
     "reference": "AFH (Landings/ground effect), PHAK Chapter 5",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/06_afh_ch5.pdf"
   },
   {
     "id": "Q172",
@@ -3393,7 +3393,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Too much speed creates different risks (float, long landing, loss of control). The DPE wants balanced energy management.",
     "cramMode": "In gusts, add a little (often half the gust factor), not a lot. Keep it stabilized; extra speed trades one risk for another.",
     "reference": "AFH (Crosswind/gusty landings), PHAK risk management",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/09_afh_ch8.pdf"
   },
   {
     "id": "Q173",
@@ -3409,7 +3409,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This tests coordination and aerodynamics understanding. Many pilots underuse rudder, especially in takeoff/climb when it matters most.",
     "cramMode": "Takeoff/climb wants right rudder. Left-turning tendencies are normal prop effects — coordinate with rudder, not just aileron.",
     "reference": "PHAK Chapter 5, AFH (Takeoff/climb coordination)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-5-aerodynamics-flight"
   },
   {
     "id": "Q174",
@@ -3425,7 +3425,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Poor coordination increases drag, worsens stall behavior, and sets up skid/spin risks in the pattern. The DPE is checking coordination mindset.",
     "cramMode": "Ailerons create adverse yaw — rudder coordinates the turn. Step on the ball; don’t fly turns with only your hands.",
     "reference": "PHAK Chapter 5, AFH coordination basics",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-5-aerodynamics-flight"
   },
   {
     "id": "Q175",
@@ -3441,7 +3441,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This is correlation-level: the DPE wants you to connect aerodynamic theory to an emergency procedure you’ll actually use.",
     "cramMode": "Best glide = minimum total drag / best L/D. Too slow (induced drag) or too fast (parasite drag) both worsen glide.",
     "reference": "PHAK Chapter 5, AFH (Glide performance)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-5-aerodynamics-flight"
   },
   {
     "id": "Q176",
@@ -3457,7 +3457,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "The DPE wants you to separate airspeed (aerodynamics) from groundspeed (navigation). Over-correcting glide speed can waste altitude and reduce options.",
     "cramMode": "Best glide is an airspeed. Wind changes where you’ll reach, not the airplane’s L/D. Fly best glide unless a specific strategy requires small adjustments.",
     "reference": "AFH (Emergency operations), PHAK aerodynamics",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf"
   },
   {
     "id": "Q177",
@@ -3473,7 +3473,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This is a classic PPL correlation question: connect DA to actual ground distance and energy. The DPE wants you to understand why book performance changes.",
     "cramMode": "High DA = higher TAS for the same IAS. Same indicated speeds, longer ground distances — more runway and more energy.",
     "reference": "PHAK Chapter 10 (Performance), PHAK Chapter 5 (Airspeed concepts)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-10-weight-and-balance"
   },
   {
     "id": "Q178",
@@ -3489,7 +3489,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This is foundational: it explains why low-altitude steep turns and abrupt maneuvers can stall unexpectedly. The DPE wants you to think in AoA, not just knots.",
     "cramMode": "Stall = critical AoA, not a magic speed. Higher G or abrupt pull-up can stall you at high airspeed.",
     "reference": "PHAK Chapter 5, AFH (Stalls)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-5-aerodynamics-flight"
   },
   {
     "id": "Q179",
@@ -3505,7 +3505,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This tests whether you understand coordination and stability at a basic level and can manage passenger comfort without creating worse oscillations.",
     "cramMode": "Dutch roll is yaw/roll coupling. Dampen with coordination (rudder), don’t chase it with aggressive ailerons.",
     "reference": "PHAK Chapter 5 (Stability), AFH basics",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-5-aerodynamics-flight"
   },
   {
     "id": "Q180",
@@ -3521,7 +3521,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Wing drop is common and not automatically a spin — but wrong control inputs can create one. The DPE wants correct stall recovery fundamentals.",
     "cramMode": "Wing drop at stall: AoA down first, keep coordinated, then level wings. Don’t aileron-fight a stalled wing.",
     "reference": "AFH (Stall recovery), PHAK Chapter 5",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/06_afh_ch5.pdf"
   },
   {
     "id": "Q181",
@@ -3537,7 +3537,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Base-to-final spin accidents are real. The DPE wants you to respect the aerodynamic conditions that create spins and show prevention judgment.",
     "cramMode": "Spin = stall + yaw. Prevent with coordination and go-arounds — especially in the pattern.",
     "reference": "AFH (Spins), PHAK Chapter 5",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/06_afh_ch5.pdf"
   },
   {
     "id": "Q182",
@@ -3569,7 +3569,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Wind shear kills by stealing airspeed/energy. The DPE wants you to protect AoA margin and use power/go-around rather than pitching into a stall.",
     "cramMode": "Shear = energy loss. Don’t pitch up to fix low — add power, protect airspeed, and go around if unstable.",
     "reference": "AFH (Approach/energy management), Aviation Weather Handbook (Wind shear)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/09_afh_ch8.pdf"
   },
   {
     "id": "Q184",
@@ -3585,7 +3585,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Pulling increases AoA and can stall the airplane while the microburst continues pushing you down. The DPE wants a conservative decision: avoid the environment and go around early.",
     "cramMode": "Microburst steals energy fast. Don’t pull to “fight sink.” Power + airspeed margin + early go-around/divert.",
     "reference": "Aviation Weather Handbook (Microbursts), AFH energy management",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation"
+    "link": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28A_FAA_Web.pdf#page=93"
   },
   {
     "id": "Q185",
@@ -3601,7 +3601,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This tests whether you can connect basic physics to performance decisions. The DPE wants “what changes and what I do about it.”",
     "cramMode": "Hot/high = lower density = worse lift and performance. You can’t change density, but you can change weight, speed, and configuration — and add margin.",
     "reference": "PHAK Chapter 5 & 10, AFH performance concepts",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-5-aerodynamics-flight"
   },
   {
     "id": "Q186",
@@ -3617,7 +3617,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This helps explain why stalls/spins can happen when pilots pull power abruptly or lose power near the stall — the control margin changes.",
     "cramMode": "Power can boost control authority via propwash. If power drops, controls can feel mushier at the same IAS — protect your margins.",
     "reference": "PHAK Chapter 5, AFH (Stalls/slow flight)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-5-aerodynamics-flight"
   },
   {
     "id": "Q187",
@@ -3633,7 +3633,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Go-arounds fail when pilots get surprised by pitch changes and configuration effects. The DPE wants a controlled, staged configuration management answer.",
     "cramMode": "Go-around: power, pitch, rudder, then flaps in stages. Don’t dump flaps low — you can lose lift and sink.",
     "reference": "AFH (Go-arounds), POH procedures",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/09_afh_ch8.pdf"
   },
   {
     "id": "Q188",
@@ -3649,7 +3649,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This tests correlation-level understanding: the problem is airflow quality, not thickness. The DPE wants conservative action with icing cues.",
     "cramMode": "Ice changes the wing. Small contamination can massively reduce lift and raise stall speed. Don’t negotiate with ice — get out and land.",
     "reference": "Aviation Weather Handbook (Icing), PHAK aerodynamics basics",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation"
+    "link": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28A_FAA_Web.pdf#page=111"
   },
   {
     "id": "Q189",
@@ -3665,7 +3665,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Pulling back in a spiral dive increases G-load and can overstress the aircraft. The DPE wants you to recognize airspeed cues and apply the correct recovery.",
     "cramMode": "Spin = stalled wings, lower airspeed. Spiral dive = not stalled, airspeed builds fast. Don’t pull — roll wings level and recover smoothly.",
     "reference": "AFH (Spins/spiral dives), PHAK Chapter 5",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/06_afh_ch5.pdf"
   },
   {
     "id": "Q190",
@@ -3681,7 +3681,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This tests structural/aerodynamic linkage. The DPE wants you to understand Va as a concept, not a memorized speed.",
     "cramMode": "Va goes down when weight goes down. POH Va is often max gross — lighter airplane needs a lower Va in turbulence.",
     "reference": "AFH (Maneuvering speed), PHAK Chapter 5",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/06_afh_ch5.pdf"
   },
   {
     "id": "Q191",
@@ -3697,7 +3697,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "The DPE wants correct operational understanding: Va is part of a strategy, not a guarantee.",
     "cramMode": "Va reduces risk from abrupt inputs, not all turbulence. Fly smooth, avoid severe, and remember Va assumptions can be exceeded.",
     "reference": "AFH (Va), PHAK turbulence guidance",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/06_afh_ch5.pdf"
   },
   {
     "id": "Q192",
@@ -3713,7 +3713,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This tests whether you understand coordination as an active skill, not a one-time adjustment.",
     "cramMode": "More power + higher AoA = more left-turn tendency = more right rudder. Coordination changes with phase of flight.",
     "reference": "PHAK Chapter 5, AFH takeoff/climb coordination",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-5-aerodynamics-flight"
   },
   {
     "id": "Q193",
@@ -3729,7 +3729,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Pattern stalls happen because pilots believe “descending = safe.” The DPE wants AoA-based thinking and go-around discipline.",
     "cramMode": "You can stall anytime AoA exceeds critical — even descending. Tightening turns low is a trap; fix AoA and go around.",
     "reference": "PHAK Chapter 5, AFH (Stalls)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-5-aerodynamics-flight"
   },
   {
     "id": "Q194",
@@ -3745,7 +3745,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "“Stretching the glide” is a common fatal error. The DPE wants you to commit to best glide and choose a reachable option rather than stalling short.",
     "cramMode": "Don’t stretch the glide. Best glide wins distance; nose-up adds induced drag and can stall you short.",
     "reference": "AFH (Engine-out procedures), PHAK aerodynamics",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/07_afh_ch6.pdf"
   },
   {
     "id": "Q195",
@@ -3761,7 +3761,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This is correlation-level: it combines load factor, AoA, coordination, and gust energy management. The DPE wants the conservative operational choice grounded in aerodynamic reasoning.",
     "cramMode": "Gusts + steep turn + rudder “tighten” = stall/spin recipe. Go around early and keep the approach stabilized.",
     "reference": "AFH (Stalls/spins/approach control), PHAK Chapter 5",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/06_afh_ch5.pdf"
   },
   {
     "id": "Q226",
@@ -3777,7 +3777,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Fire is time-critical. The DPE wants decisive checklist execution and an immediate landing plan.",
     "cramMode": "Fire = checklist + land immediately. Declare early.",
     "reference": "AFH (Emergency Procedures), POH",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf"
   },
   {
     "id": "Q227",
@@ -3793,7 +3793,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Smoke can incapacitate you fast. The DPE wants priorities: fire control > comms convenience.",
     "cramMode": "Smoke = treat as fire. Kill the source, ventilate, land soon.",
     "reference": "AFH (Emergency Procedures)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf"
   },
   {
     "id": "Q228",
@@ -3809,7 +3809,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Small improvements can mask a worsening failure. The DPE wants you to bias toward landing while you still have power and options.",
     "cramMode": "Roughness: identify a landing option first, then checklist. If not fully resolved, land soon.",
     "reference": "AFH (Abnormal/Emergency), PHAK (Powerplant)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook | https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf | https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-7-aircraft-systems"
   },
   {
     "id": "Q229",
@@ -3825,7 +3825,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Night adds dependency on electrical systems. The DPE wants you to recognize how the risk changes with conditions.",
     "cramMode": "At night, electrical failures become urgent—land while you still have options.",
     "reference": "PHAK (Electrical), AFH (Night/Emergencies)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak | https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-7-aircraft-systems | https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf"
   },
   {
     "id": "Q230",
@@ -3841,7 +3841,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This tests priorities. Many incidents become accidents because the pilot fixates on a minor issue at low altitude.",
     "cramMode": "Door open is not an emergency. Fly, climb, then come back and land normally.",
     "reference": "AFH (Abnormal/Emergency Procedures)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf"
   },
   {
     "id": "Q231",
@@ -3857,7 +3857,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "A comm failure at a towered airport is manageable if you stay predictable and use light signals. The DPE wants you to know the concept and not panic into creating a traffic conflict.",
     "cramMode": "NORDO VFR at towered: stay predictable, watch for light signals, squawk 7600, land when signaled.",
     "reference": "AIM (Light Gun Signals/Comm Failure), 14 CFR 91.129",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.129"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap4_section_3.html | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-B/section-91.129"
   },
   {
     "id": "Q232",
@@ -3873,7 +3873,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Forcing a quick turn with no brakes can cause a loss of control. The DPE wants you to prioritize staying on the pavement under control over social pressure.",
     "cramMode": "No brakes: aerodynamic braking + straight-ahead stop beats a rushed high-speed exit.",
     "reference": "AFH (Abnormal/Emergency Landing), PHAK (Airport Ops)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook | https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf | https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-14-airport-operations"
   },
   {
     "id": "Q233",
@@ -3889,7 +3889,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Even VFR pilots can become disoriented in haze/flat light. The DPE wants you to recognize when a ‘systems’ issue becomes an operational risk and to choose the conservative landing.",
     "cramMode": "Partial panel + marginal VFR = land soon. Keep eyes outside and use remaining instruments.",
     "reference": "PHAK (Instruments/Spatial Disorientation), AFH (Instrument Failures)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak | https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-17-aeromedical-factors | https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf"
   },
   {
     "id": "Q234",
@@ -3905,7 +3905,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Medical issues can worsen rapidly, and in-flight workload can spike. The DPE wants conservative judgment: land early when health is uncertain.",
     "cramMode": "Medical uncertainty: land early. Declare/request priority as needed—get help on the ground.",
     "reference": "FAA Risk Management Handbook, 14 CFR 91.3",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/risk_management_handbook | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-A/section-91.3"
+    "link": "https://www.faa.gov/sites/faa.gov/files/2022-06/risk_management_handbook_2A.pdf#page=13 | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-A/section-91.3"
   },
   {
     "id": "Q235",
@@ -3921,7 +3921,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Ditching is high risk; land is usually preferred if reachable without increasing risk. The DPE wants a calm, structured forced-landing plan and passenger management.",
     "cramMode": "Engine out: best glide, pick a spot early (land if practical), brief passengers, communicate/7700.",
     "reference": "AFH (Forced Landings/DITCHING)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf"
   },
   {
     "id": "Q236",
@@ -3937,7 +3937,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Intermittent electrical faults can reappear as fire. The DPE wants you to resist plan continuation bias and choose a conservative landing.",
     "cramMode": "Smoke isn’t ‘fixed’ because it stopped. Treat it as serious—divert and land soon.",
     "reference": "AFH (Electrical Fire/Smoke), PHAK (Electrical)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook | https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf | https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-7-aircraft-systems"
   },
   {
     "id": "Q237",
@@ -3953,7 +3953,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Bird strikes can damage props, windscreens, and control surfaces. The DPE wants you to bias toward landing while you still have power and options.",
     "cramMode": "After a strike: fly first, assess, then land soon if there’s any doubt—don’t press.",
     "reference": "AFH (Abnormal/Emergency), PHAK (Aeromedical/Distraction)",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook | https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf | https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/phak/chapter-17-aeromedical-factors"
   },
   {
     "id": "Q238",
@@ -3969,7 +3969,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Runaway trim can quickly lead to loss of control or pilot exhaustion. The DPE wants decisive disconnect actions and a conservative landing plan.",
     "cramMode": "Trim runaway: hold attitude, disconnect, slow to reduce forces, and land soon.",
     "reference": "AFH (Flight Control Malfunctions), POH",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf"
   },
   {
     "id": "Q239",
@@ -3985,7 +3985,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "Wind shear is an energy problem. Pulling back increases AoA and can cause a stall close to the ground. The DPE wants ‘power + correct pitch + go-around early’ thinking.",
     "cramMode": "Wind shear: add power, manage pitch, go around early—don’t yank to ‘save’ it.",
     "reference": "AIM (Wind Shear), AFH (Go-Arounds)",
-    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/index.html | https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook"
+    "link": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html | https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf"
   },
   {
     "id": "Q240",
@@ -4001,7 +4001,7 @@ const ALL_QUESTIONS = [
     "whyThisMatters": "This tests controlled urgency: fast doesn’t mean uncontrolled. The DPE wants you to descend quickly while still respecting aircraft limits and keeping a plan to land.",
     "cramMode": "Emergency descent = urgency with control: stay within limits and aim to land ASAP.",
     "reference": "AFH (Emergency Procedures), 14 CFR 91.3",
-    "link": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-A/section-91.3"
+    "link": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf | https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-A/section-91.3"
   }
 ];
 
