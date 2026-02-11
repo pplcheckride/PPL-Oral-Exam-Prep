@@ -7,3 +7,6 @@ supabase/.temp/
 # Python
 __pycache__/
 *.pyc
+
+# Local manual deploy bundle
+netlify-deploy/
