@@ -43,12 +43,25 @@ Use this checklist for every production release of `pplcheckride.com`.
       `http://localhost:8000/index.html`
 - [ ] Hard refresh with cache disabled.
 - [ ] Confirm footer shows expected version.
+- [ ] Confirm mode cards are keyboard operable:
+      - Tab to each mode card
+      - Press Enter/Space to launch
+- [ ] Confirm Cloud Sync status row is visible on main screen.
 - [ ] Test sync flow:
       - Connect Cloud Sync (`PPL-TEST-001`)
       - Rate 2-3 questions
       - Refresh and confirm progress persists
+- [ ] Confirm `Sync Now` and `View History` buttons enable after connect.
 - [ ] Run one mock checkride and verify row appears in
       `public.mock_checkride_results`.
+- [ ] Verify trial lock behavior (while not connected/unlocked):
+      - Only curated 10-question pool is used in Study/Random/Review
+      - Mock Checkride runs `10 questions / 10 minutes`
+      - Trial upsell banner/CTA is visible
+- [ ] Verify unlock transition behavior:
+      - Connect valid license key
+      - Confirm full 250-question access appears without hard reload
+      - Confirm prior hidden progress reappears in stats/insights
 
 ## 5) Deploy to production
 
@@ -74,5 +87,8 @@ If Netlify uses manual upload:
 
 - [ ] Check homepage loads with no console errors.
 - [ ] Check Cloud Sync connect/sync works in production.
+- [ ] Check Cloud Sync status text updates after sync and shows recent timestamp.
+- [ ] Check mock history is reachable from UI and displays recent attempts.
+- [ ] Check trial mode copy and CTA are visible for non-unlocked sessions.
 - [ ] Check one new progress update appears in `public.user_progress`.
 - [ ] Check one new mock result appears in `public.mock_checkride_results`.

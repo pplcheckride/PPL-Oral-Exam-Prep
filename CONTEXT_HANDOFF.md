@@ -127,6 +127,37 @@ User confirmed:
 2. Add a server-side delete endpoint for optional "hard reset cloud data".
 3. Automate release flow (version bump + smoke + tag) via script or CI.
 
+## 10) UX + Trial rollout status (implemented)
+
+Recent app updates now in `index.html`:
+
+- **P1/P2 UX stabilization**
+  - Mode cards are semantic `<button>` elements (keyboard operable).
+  - Focus-visible styles added for keyboard navigation.
+  - Cloud Sync status row added on main screen:
+    - connection state
+    - last sync timestamp
+    - `Sync Now` action
+    - `View History` action
+  - Cloud copy updated to consistently reference:
+    - `🧹 Reset Sync + Local Data`
+  - Debounced progress push added to reduce perceived sync lag (plus existing interval/unload fallback).
+  - Dynamic stat grids in mock results and insights now use responsive classes (mobile-safe).
+
+- **Free trial mode (10 questions)**
+  - Access model:
+    - unlocked = existing stored license session (`token` + `license hash`)
+    - trial = not unlocked
+  - Curated trial pool:
+    - `Q1,Q3,Q12,Q25,Q48,Q77,Q101,Q134,Q182,Q229`
+  - All modes work in trial but are restricted to trial pool.
+  - Trial mock checkride behavior:
+    - `10 questions / 10 minutes`
+  - Unlocked mock checkride remains:
+    - `30 questions / 30 minutes`
+  - Trial upsell indicators are shown in landing/mode/results UI.
+  - Historical progress is retained; non-trial content is hidden while locked and reappears after unlock.
+
 ---
 
 ## Paste-this prompt for next chat

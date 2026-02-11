@@ -85,6 +85,13 @@
             color: #cbd5e1;
             font-weight: 600;
         }
+
+        .trial-status-note {
+            margin-top: 12px;
+            color: #bfdbfe;
+            font-size: 13px;
+            font-weight: 600;
+        }
         
         .welcome-info {
             margin-bottom: 16px;
@@ -949,6 +956,11 @@
             position: relative;
             box-shadow: 0 20px 60px rgba(59,130,246,0.4);
             overflow: hidden;
+            width: 100%;
+            text-align: left;
+            font-family: 'Inter', sans-serif;
+            appearance: none;
+            -webkit-appearance: none;
         }
         
         .hero-mode-card::before {
@@ -1208,6 +1220,11 @@
             border: 3px solid transparent;
             position: relative;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            width: 100%;
+            text-align: left;
+            font-family: 'Inter', sans-serif;
+            appearance: none;
+            -webkit-appearance: none;
         }
         
         .mode-card::after {
@@ -1221,8 +1238,6 @@
             background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(147,197,253,0.1));
             opacity: 0;
             transition: opacity 0.3s ease;
-            pointer-events: none;
-        }
             pointer-events: none;
         }
         
@@ -1812,6 +1827,133 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(239,68,68,0.2);
         }
+
+        .sync-status-container {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 22px;
+        }
+
+        .sync-status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border-radius: 999px;
+            padding: 8px 12px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+        }
+
+        .sync-status-pill.disconnected {
+            background: rgba(148,163,184,0.18);
+            color: #cbd5e1;
+            border: 1px solid rgba(148,163,184,0.35);
+        }
+
+        .sync-status-pill.connected {
+            background: rgba(16,185,129,0.18);
+            color: #bbf7d0;
+            border: 1px solid rgba(16,185,129,0.4);
+        }
+
+        .sync-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .sync-btn {
+            border: 1px solid rgba(255,255,255,0.25);
+            background: rgba(59,130,246,0.14);
+            color: #dbeafe;
+            border-radius: 10px;
+            padding: 8px 12px;
+            font-size: 12px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .sync-btn:hover:not(:disabled) {
+            background: rgba(59,130,246,0.24);
+            transform: translateY(-1px);
+        }
+
+        .sync-btn:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .trial-banner {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(217, 119, 6, 0.2));
+            border: 1px solid rgba(245,158,11,0.45);
+            border-radius: 14px;
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            color: #fef3c7;
+            margin-bottom: 8px;
+        }
+
+        .trial-banner-title {
+            font-size: 13px;
+            font-weight: 800;
+            color: #fde68a;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            margin-bottom: 4px;
+        }
+
+        .trial-banner-desc {
+            font-size: 13px;
+            color: #fffbeb;
+            line-height: 1.45;
+        }
+
+        .trial-banner .upgrade-btn {
+            flex: 0 0 auto;
+            min-width: 180px;
+            padding: 12px 16px;
+            font-size: 14px;
+        }
+
+        .trial-badge-inline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(245,158,11,0.2);
+            color: #fef3c7;
+            border: 1px solid rgba(245,158,11,0.45);
+            border-radius: 999px;
+            padding: 4px 10px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-left: 8px;
+        }
+
+        .stat-grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        button:focus-visible,
+        a:focus-visible {
+            outline: 3px solid #93c5fd;
+            outline-offset: 2px;
+        }
         
         /* Hidden */
         .hidden {
@@ -2003,6 +2145,33 @@
             .control-bar {
                 flex-direction: column;
             }
+
+            .sync-status-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .sync-actions {
+                justify-content: stretch;
+            }
+
+            .sync-btn {
+                flex: 1;
+            }
+
+            .trial-banner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .trial-banner .upgrade-btn {
+                width: 100%;
+                min-width: 0;
+            }
+
+            .stat-grid-4 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
         }
     </style>
 
@@ -2012,11 +2181,14 @@
     <!-- Landing Screen -->
     <div class="landing-screen" id="landing-screen">
         <div class="welcome-card">
-            <div class="welcome-badge">PREMIUM VERSION</div>
+            <div class="welcome-badge" id="welcome-access-badge">PREMIUM VERSION</div>
             <div class="welcome-title">PPL Oral Exam Prep</div>
             <div class="welcome-subtitle">Master Your Checkride with Real DPE Scenarios</div>
             <div class="welcome-description">
                 Practice with <strong>250 realistic scenario-based questions</strong> that mirror actual checkride situations. Each question includes detailed model answers, FAA references, and intelligent progress tracking.
+            </div>
+            <div class="trial-status-note hidden" id="landing-trial-note">
+                Free Trial Active: Access 10 curated questions. Connect your license to unlock the full 250-question bank.
             </div>
             
             <button type="button" class="start-button" onclick="startApp()">
@@ -2211,48 +2383,73 @@
                     <button type="button" class="main-reset-btn" onclick="configureCloudSync()">
                         ⚙️ Cloud Sync Setup
                     </button>
+                    <button type="button" class="main-reset-btn" onclick="showMockHistory()">
+                        📜 Mock History
+                    </button>
                     <button type="button" class="main-reset-btn" onclick="resetCloudSyncSettings()">
                         🧹 Reset Sync + Local Data
+                    </button>
+                </div>
+            </div>
+
+            <div class="sync-status-container" id="sync-status-container">
+                <div class="sync-status-pill disconnected" id="sync-status-pill">☁️ Cloud Sync: Not connected</div>
+                <div class="sync-actions">
+                    <button type="button" class="sync-btn" id="sync-now-btn" onclick="manualSyncNow()" disabled>
+                        🔄 Sync Now
+                    </button>
+                    <button type="button" class="sync-btn" id="sync-history-btn" onclick="showMockHistory()" disabled>
+                        📜 View History
                     </button>
                 </div>
             </div>
             
             <!-- Mode Selection -->
             <div class="mode-selection" id="mode-selection">
+                <div class="trial-banner hidden" id="trial-banner">
+                    <div>
+                        <div class="trial-banner-title">Free Trial Mode</div>
+                        <div class="trial-banner-desc">
+                            You currently have access to 10 curated questions across all modes.
+                        </div>
+                    </div>
+                    <button type="button" class="upgrade-btn primary" onclick="upgradeNow()">Unlock Full Access</button>
+                </div>
+
                 <!-- Hero Card: Mock Checkride -->
-                <div class="hero-mode-card" onclick="startMockCheckride()">
+                <button type="button" class="hero-mode-card" onclick="startMockCheckride()">
                     <div class="hero-badge">⭐ Featured</div>
                     <div class="mode-icon">⏱️</div>
-                    <div class="mode-title">Mock Checkride Simulator</div>
-                    <div class="mode-desc">The ultimate test of your readiness. 30-minute timed exam with real DPE pressure. Answer questions from memory, reveal answers as you go, and get a pass/fail score. This is as close as it gets to the real thing.</div>
-                </div>
+                    <div class="mode-title">Mock Checkride Simulator <span class="trial-badge-inline hidden" id="trial-mock-badge">Trial: 10Q/10M</span></div>
+                    <div class="mode-desc" id="hero-mode-desc">The ultimate test of your readiness. 30-minute timed exam with real DPE pressure. Answer questions from memory, reveal answers as you go, and get a pass/fail score. This is as close as it gets to the real thing.</div>
+                </button>
                 
                 <!-- Standard Modes Grid -->
                 <div class="modes-grid">
-                    <div class="mode-card" onclick="startMode('study')">
+                    <button type="button" class="mode-card" onclick="startMode('study')">
                         <div class="start-here-badge">👉 START HERE</div>
                         <div class="mode-icon">📚</div>
-                        <div class="mode-title">Study Mode</div>
-                        <div class="mode-desc">Questions in order (Q1 → Q250). Best for first-time learning and systematic review.</div>
-                    </div>
+                        <div class="mode-title">Study Mode <span class="trial-badge-inline hidden" id="trial-study-badge">Trial limited</span></div>
+                        <div class="mode-desc" id="study-mode-desc">Questions in order (Q1 → Q250). Best for first-time learning and systematic review.</div>
+                    </button>
                     
-                    <div class="mode-card" onclick="startMode('random')">
+                    <button type="button" class="mode-card" onclick="startMode('random')">
                         <div class="mode-icon">🎲</div>
                         <div class="mode-title">Random Mode</div>
                         <div class="mode-desc">Shuffled questions to test your recall. Perfect for breaking out of memorization patterns!</div>
-                    </div>
+                    </button>
                     
-                    <div class="mode-card" onclick="startMode('review')">
+                    <button type="button" class="mode-card" onclick="startMode('review')">
                         <div class="mode-icon">🎯</div>
                         <div class="mode-title">Review Wrong Answers</div>
                         <div class="mode-desc">Focus only on questions you got wrong. Perfect for targeted practice on weak areas.</div>
-                    </div>
+                    </button>
                     
-                    <div class="mode-card" onclick="showPerformanceInsights()">
+                    <button type="button" class="mode-card" onclick="showPerformanceInsights()">
                         <div class="mode-icon">📊</div>
                         <div class="mode-title">Performance Insights</div>
                         <div class="mode-desc">Detailed analytics on your study patterns and weak areas with personalized recommendations.</div>
-                    </div>
+                    </button>
                 </div>
             </div>
             
@@ -2322,11 +2519,11 @@
                         <h3>How It Works:</h3>
                         <div class="rule-item">
                             <span class="rule-icon">1️⃣</span>
-                            <span>You'll get <strong>30 questions</strong> covering all major topics in checkride order</span>
+                            <span>You'll get <strong><span id="mock-question-count-label">30 questions</span></strong> covering all major topics in checkride order</span>
                         </div>
                         <div class="rule-item">
                             <span class="rule-icon">2️⃣</span>
-                            <span><strong>30-minute timer</strong> starts when you begin</span>
+                            <span><strong><span id="mock-duration-label">30-minute timer</span></strong> starts when you begin</span>
                         </div>
                         <div class="rule-item">
                             <span class="rule-icon">3️⃣</span>
@@ -2598,6 +2795,50 @@
         }
 
         let cloudSync = new CloudSyncClient();
+        let cloudPushDebounceTimer = null;
+
+        function hasLicenseSession() {
+            const token = localStorage.getItem(STORAGE.token);
+            const licenseHash = localStorage.getItem(STORAGE.licenseHash);
+            return Boolean(token && licenseHash);
+        }
+
+        function isUnlocked() {
+            return hasLicenseSession();
+        }
+
+        function isTrialMode() {
+            return !isUnlocked();
+        }
+
+        function formatLastSyncTime(ts) {
+            if (!ts) return 'Never';
+            return new Date(ts).toLocaleString();
+        }
+
+        function renderSyncStatus() {
+            const pill = document.getElementById('sync-status-pill');
+            const syncNowBtn = document.getElementById('sync-now-btn');
+            const historyBtn = document.getElementById('sync-history-btn');
+            if (!pill) return;
+
+            const connected = cloudSync && cloudSync.isReady();
+            if (!connected) {
+                pill.textContent = '☁️ Cloud Sync: Not connected';
+                pill.classList.add('disconnected');
+                pill.classList.remove('connected');
+                if (syncNowBtn) syncNowBtn.disabled = true;
+                if (historyBtn) historyBtn.disabled = true;
+                return;
+            }
+
+            const lastSyncText = formatLastSyncTime(cloudSync.lastSyncTime);
+            pill.textContent = `☁️ Cloud Sync: Connected (Last sync: ${lastSyncText})`;
+            pill.classList.remove('disconnected');
+            pill.classList.add('connected');
+            if (syncNowBtn) syncNowBtn.disabled = false;
+            if (historyBtn) historyBtn.disabled = false;
+        }
 
         function resetCloudSyncSettings({ reload = true, clearLocalProgress = true } = {}) {
             const warning = clearLocalProgress
@@ -2625,6 +2866,9 @@
                 localStorage.removeItem(STORAGE.legacyProgress);
                 updateStats();
             }
+
+            renderSyncStatus();
+            renderAccessState();
 
             if (reload) location.reload();
         }
@@ -2681,6 +2925,9 @@
                 reason = String(e);
             }
 
+            reason = String(reason).replace(/\s+/g, ' ').trim();
+            if (reason.length > 260) reason = reason.slice(0, 257) + '...';
+
             let hint = '';
             const lc = String(reason).toLowerCase();
             if (lc.includes('invalid license')) {
@@ -2697,11 +2944,7 @@
                     'Network/CORS issue. If you opened the app via file://, try running a local server: `python3 -m http.server 8000` and open `http://localhost:8000/index.html`.';
             }
 
-            const keyPreview = (CLOUD.anonKey || '').slice(0, 18);
-            const url = CLOUD.projectUrl || '';
-            const base = `Supabase URL: ${url}\nAPI key: ${keyPreview ? `${keyPreview}…` : '(missing)'}`;
-
-            return { status, reason: String(reason), hint, base };
+            return { status, reason: String(reason), hint };
         }
 
         async function connectCloudSync() {
@@ -2721,6 +2964,8 @@
                 const ok = await syncNow({ throwOnError: true });
                 if (!ok) throw new Error('Initial sync failed');
                 cloudSync.startAutoSync(() => syncNow());
+                renderSyncStatus();
+                renderAccessState();
                 alert('✅ Cloud Sync enabled and synced.');
             } catch (e) {
                 console.error('[CloudSync] connect failed:', e);
@@ -2738,11 +2983,12 @@
                 alert(
                     `❌ Cloud Sync failed.${info.status ? ` (HTTP ${info.status})` : ''}\n\n` +
                     `${info.reason}\n\n` +
-                    `${info.base}\n` +
                     extra +
                     (info.hint ? `\nTip: ${info.hint}\n` : '\n') +
-                    `\nIf you previously configured a different project/key, click “🧹 Reset Cloud Sync” then try again.`
+                    `\nIf you previously configured a different project/key, click “🧹 Reset Sync + Local Data” then try again.`
                 );
+                renderSyncStatus();
+                renderAccessState();
             }
         }
 
@@ -6777,9 +7023,70 @@ const questions = ALL_QUESTIONS;
 
         const QUESTION_IDS = questions.map(q => q.id);
         const QUESTIONS_BY_ID = new Map(questions.map(q => [q.id, q]));
+        const TRIAL_QUESTION_IDS = ['Q1', 'Q3', 'Q12', 'Q25', 'Q48', 'Q77', 'Q101', 'Q134', 'Q182', 'Q229'];
 
         function getQuestion(id) {
             return QUESTIONS_BY_ID.get(id);
+        }
+
+        function getActiveQuestionIds() {
+            if (!isTrialMode()) return QUESTION_IDS;
+            return TRIAL_QUESTION_IDS.filter((id) => QUESTIONS_BY_ID.has(id));
+        }
+
+        function getProgressStats(questionIds = getActiveQuestionIds()) {
+            let correct = 0;
+            let unsure = 0;
+            let wrong = 0;
+            let studied = 0;
+            for (const id of questionIds) {
+                const rating = progress[id];
+                if (!rating) continue;
+                studied++;
+                if (rating === 'correct') correct++;
+                else if (rating === 'unsure') unsure++;
+                else if (rating === 'wrong') wrong++;
+            }
+            return {
+                total: questionIds.length,
+                studied,
+                correct,
+                unsure,
+                wrong,
+            };
+        }
+
+        function renderAccessState() {
+            const trial = isTrialMode();
+            const activeQuestionCount = getActiveQuestionIds().length;
+
+            const welcomeBadge = document.getElementById('welcome-access-badge');
+            const landingNote = document.getElementById('landing-trial-note');
+            const trialBanner = document.getElementById('trial-banner');
+            const trialMockBadge = document.getElementById('trial-mock-badge');
+            const trialStudyBadge = document.getElementById('trial-study-badge');
+            const heroModeDesc = document.getElementById('hero-mode-desc');
+            const studyModeDesc = document.getElementById('study-mode-desc');
+
+            if (welcomeBadge) welcomeBadge.textContent = trial ? 'FREE TRIAL' : 'PREMIUM VERSION';
+            if (landingNote) landingNote.classList.toggle('hidden', !trial);
+            if (trialBanner) trialBanner.classList.toggle('hidden', !trial);
+            if (trialMockBadge) trialMockBadge.classList.toggle('hidden', !trial);
+            if (trialStudyBadge) trialStudyBadge.classList.toggle('hidden', !trial);
+
+            if (heroModeDesc) {
+                heroModeDesc.textContent = trial
+                    ? 'Trial mode runs a focused 10-question, 10-minute mock checkride. Connect your license key to unlock the full 30-question simulator.'
+                    : 'The ultimate test of your readiness. 30-minute timed exam with real DPE pressure. Answer questions from memory, reveal answers as you go, and get a pass/fail score. This is as close as it gets to the real thing.';
+            }
+
+            if (studyModeDesc) {
+                studyModeDesc.textContent = trial
+                    ? `Questions in order from your curated trial set (${activeQuestionCount} total). Unlock to access all 250 questions.`
+                    : 'Questions in order (Q1 → Q250). Best for first-time learning and systematic review.';
+            }
+
+            if (typeof updateStats === 'function') updateStats();
         }
         
         // Show app
@@ -6787,6 +7094,8 @@ const questions = ALL_QUESTIONS;
             document.getElementById('landing-screen').classList.add('hidden');
             document.getElementById('app-screen').classList.add('active');
             updateStats();
+            renderAccessState();
+            renderSyncStatus();
             
             // Show onboarding on first visit
             const hasSeenOnboarding = localStorage.getItem('ppl-seen-onboarding');
@@ -6803,28 +7112,24 @@ const questions = ALL_QUESTIONS;
         
         // Check if all questions completed
         function checkCompletion() {
-            const totalQuestions = questions.length;
-            const studiedCount = Object.keys(progress).length;
+            const stats = getProgressStats();
             
-            if (studiedCount === totalQuestions) {
+            if (stats.total > 0 && stats.studied === stats.total) {
                 showCompletionScreen();
             }
         }
         
         // Show completion screen
         function showCompletionScreen() {
-            let correct = 0, unsure = 0, wrong = 0;
-            
-            for (let key in progress) {
-                if (progress[key] === 'correct') correct++;
-                else if (progress[key] === 'unsure') unsure++;
-                else if (progress[key] === 'wrong') wrong++;
-            }
-            
-            const percentage = Math.round((correct / questions.length) * 100);
+            const stats = getProgressStats();
+            const { total: totalQuestions, correct, unsure, wrong } = stats;
+            const percentage = totalQuestions > 0 ? Math.round((correct / totalQuestions) * 100) : 0;
+            const trial = isTrialMode();
             
             let message = '';
-            if (percentage >= 80) {
+            if (trial) {
+                message = "Great momentum. You finished the free trial set. Unlock full access to continue across all 250 questions.";
+            } else if (percentage >= 80) {
                 message = "Outstanding! You're showing checkride-ready knowledge. Keep this momentum going!";
             } else if (percentage >= 60) {
                 message = "Good progress! Review the questions you missed and you'll be checkride-ready.";
@@ -6844,6 +7149,7 @@ const questions = ALL_QUESTIONS;
                     <p style="color: #64748b; font-size: 18px; line-height: 1.6; max-width: 500px; margin: 0 auto 32px;">
                         ${message}
                     </p>
+                    ${trial ? `<button type="button" onclick="upgradeNow()" style="margin-bottom: 24px; padding: 12px 18px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; border: none; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif;">Unlock Full Access</button>` : ''}
                     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 400px; margin: 0 auto 32px;">
                         <div style="background: #f0fdf4; padding: 16px; border-radius: 12px; border: 2px solid #bbf7d0;">
                             <div style="font-size: 32px; font-weight: 800; color: #16a34a;">${correct}</div>
@@ -6939,15 +7245,23 @@ const questions = ALL_QUESTIONS;
         // Mock Checkride Variables
         let mockTimer = null;
         let mockTimeRemaining = 30 * 60; // 30 minutes
+        let mockDurationSeconds = 30 * 60;
         let mockQuestions = [];
         let mockCurrentIndex = 0;
         let mockResults = [];
         
         // Start Mock Checkride (show briefing)
         function startMockCheckride() {
+            const trial = isTrialMode();
+            const questionCountEl = document.getElementById('mock-question-count-label');
+            const durationEl = document.getElementById('mock-duration-label');
+            if (questionCountEl) questionCountEl.textContent = trial ? '10 questions' : '30 questions';
+            if (durationEl) durationEl.textContent = trial ? '10-minute timer' : '30-minute timer';
+
             // Hide mode selection
             document.getElementById('mode-selection').classList.add('hidden');
             document.getElementById('main-reset-container').classList.add('hidden');
+            document.getElementById('sync-status-container').classList.add('hidden');
             document.getElementById('stats-dashboard').classList.add('hidden');
             
             // Show briefing
@@ -6963,6 +7277,7 @@ const questions = ALL_QUESTIONS;
             briefing.classList.add('hidden');
             document.getElementById('mode-selection').classList.remove('hidden');
             document.getElementById('main-reset-container').classList.remove('hidden');
+            document.getElementById('sync-status-container').classList.remove('hidden');
             document.getElementById('stats-dashboard').classList.remove('hidden');
         }
         
@@ -7005,6 +7320,7 @@ const questions = ALL_QUESTIONS;
             // Show mode selection
             document.getElementById('mode-selection').classList.remove('hidden');
             document.getElementById('main-reset-container').classList.remove('hidden');
+            document.getElementById('sync-status-container').classList.remove('hidden');
             document.getElementById('stats-dashboard').classList.remove('hidden');
             // console.log('Mode selection shown');
             
@@ -7016,11 +7332,18 @@ const questions = ALL_QUESTIONS;
         
         // Begin Mock Checkride (start timer and exam)
         function beginMockCheckride() {
-            // Category-stratified random selection (30 total)
+            const activeQuestionIds = getActiveQuestionIds();
+            const trial = isTrialMode();
+            const targetQuestionCount = trial ? 10 : 30;
+            mockDurationSeconds = trial ? 10 * 60 : 30 * 60;
+
+            // Category-stratified random selection
             // Uses category proportions without hard-coded index ranges.
-            function pickMockQuestionIds(count) {
+            function pickMockQuestionIds(count, poolIds) {
                 const byCategory = {};
-                for (const q of questions) {
+                for (const questionId of poolIds) {
+                    const q = getQuestion(questionId);
+                    if (!q) continue;
                     const category = (q.category || 'Uncategorized').toString();
                     (byCategory[category] ||= []).push(q.id);
                 }
@@ -7058,11 +7381,11 @@ const questions = ALL_QUESTIONS;
                 return selected;
             }
 
-            mockQuestions = pickMockQuestionIds(30);
+            mockQuestions = pickMockQuestionIds(Math.min(targetQuestionCount, activeQuestionIds.length), activeQuestionIds);
             
             mockCurrentIndex = 0;
             mockResults = [];
-            mockTimeRemaining = 30 * 60; // 30 minutes
+            mockTimeRemaining = mockDurationSeconds;
             
             // Hide briefing, show exam
             const briefing = document.getElementById('mock-briefing');
@@ -7072,6 +7395,12 @@ const questions = ALL_QUESTIONS;
             const examScreen = document.getElementById('mock-exam-screen');
             examScreen.classList.remove('hidden');
             examScreen.classList.add('active');
+
+            const timerDisplay = document.getElementById('timer-display');
+            if (timerDisplay) {
+                const minutes = Math.floor(mockTimeRemaining / 60);
+                timerDisplay.textContent = `${minutes}:00`;
+            }
             
             // Start timer
             startMockTimer();
@@ -7207,7 +7536,7 @@ const questions = ALL_QUESTIONS;
             saveProgress();
             
             const percentage = Math.round((correct / mockQuestions.length) * 100);
-            const timeUsed = 1800 - mockTimeRemaining;
+            const timeUsed = Math.max(0, mockDurationSeconds - mockTimeRemaining);
             const minutesUsed = Math.floor(timeUsed / 60);
             const secondsUsed = timeUsed % 60;
 
@@ -7220,13 +7549,13 @@ const questions = ALL_QUESTIONS;
             let animationClass = '';
             let containerStyle = '';
             
-            if (percentage >= 80) { // 24/30 questions - checkride ready
+            if (percentage >= 80) { // checkride-ready threshold
                 passFail = '<div style="font-size: 64px; margin-bottom: 16px;" class="mega-bounce">🎉✨🎉</div><div style="color: #16a34a; font-size: 32px; font-weight: 900; margin-bottom: 16px; text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);" class="epic-celebrate">YOU PASSED!</div>';
                 message = "🔥 Outstanding performance! You demonstrated checkride-ready knowledge. You'd likely pass the real oral exam! 🔥";
                 scoreColor = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
                 animationClass = 'score-explode';
                 containerStyle = 'background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(5, 150, 105, 0.05) 100%); border: 3px solid #10b981;';
-            } else if (percentage >= 70) { // 21-23/30 questions - needs more work
+            } else if (percentage >= 70) { // needs more work
                 passFail = '<div style="font-size: 48px; margin-bottom: 16px;" class="fade-in-slow">⚠️</div><div style="color: #d97706; font-size: 28px; font-weight: 800; margin-bottom: 16px;" class="fade-in-slow">MARGINAL</div>';
                 message = "You're close, but need more review. Focus on the questions you got wrong before your checkride.";
                 scoreColor = 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)';
@@ -7239,6 +7568,16 @@ const questions = ALL_QUESTIONS;
                 animationClass = 'shake-animation';
                 containerStyle = '';
             }
+
+            const trialCta = isTrialMode()
+                ? `
+                    <div style="background: rgba(245,158,11,0.14); border: 2px solid rgba(245,158,11,0.45); border-radius: 12px; padding: 16px; margin-bottom: 24px; text-align: center;">
+                        <div style="font-size: 13px; font-weight: 700; color: #92400e; margin-bottom: 8px;">FREE TRIAL RESULT</div>
+                        <div style="font-size: 14px; color: #78350f; line-height: 1.5;">You completed the 10-question trial mock. Unlock full access for all 250 questions and the full 30-question checkride simulator.</div>
+                        <button type="button" onclick="upgradeNow()" style="margin-top: 12px; padding: 10px 16px; border-radius: 10px; border: none; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif;">Unlock Full Access</button>
+                    </div>
+                `
+                : '';
             
             // Build results HTML
             const resultsHTML = `
@@ -7261,8 +7600,10 @@ const questions = ALL_QUESTIONS;
                     <p style="color: #64748b; font-size: 16px; line-height: 1.6; text-align: center; max-width: 500px; margin: 0 auto 32px;">
                         ${message}
                     </p>
+
+                    ${trialCta}
                     
-                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px;">
+                    <div class="stat-grid-4" style="margin-bottom: 32px;">
                         <div style="background: #f0fdf4; padding: 20px; border-radius: 12px; border: 2px solid #bbf7d0; text-align: center;">
                             <div style="font-size: 36px; font-weight: 800; color: #16a34a;">${correct}</div>
                             <div style="font-size: 11px; color: #16a34a; font-weight: 600; text-transform: uppercase;">Correct</div>
@@ -7349,6 +7690,7 @@ const questions = ALL_QUESTIONS;
             resultsEl.classList.add('hidden');
             document.getElementById('mode-selection').classList.remove('hidden');
             document.getElementById('main-reset-container').classList.remove('hidden');
+            document.getElementById('sync-status-container').classList.remove('hidden');
             document.getElementById('stats-dashboard').classList.remove('hidden');
             
             // Reset mock state
@@ -7438,23 +7780,18 @@ const questions = ALL_QUESTIONS;
         }
 
         // Save progress
-        function saveProgress() {
+        function saveProgress({ skipCloudPush = false } = {}) {
             localStorage.setItem(STORAGE.progressV2, JSON.stringify(progress));
             localStorage.setItem(STORAGE.attemptsV2, JSON.stringify(attempts));
             localStorage.setItem(STORAGE.updatedV2, JSON.stringify(updated));
             updateStats();
+            if (!skipCloudPush) scheduleCloudProgressPush();
         }
         
         // Update stats display
         function updateStats() {
-            let correct = 0, unsure = 0, wrong = 0, studied = 0;
-            
-            for (let key in progress) {
-                studied++;
-                if (progress[key] === 'correct') correct++;
-                else if (progress[key] === 'unsure') unsure++;
-                else if (progress[key] === 'wrong') wrong++;
-            }
+            const stats = getProgressStats();
+            const { total, studied, correct, unsure, wrong } = stats;
             
             document.getElementById('stat-correct').textContent = correct;
             document.getElementById('stat-unsure').textContent = unsure;
@@ -7462,7 +7799,7 @@ const questions = ALL_QUESTIONS;
             document.getElementById('stat-progress').textContent = studied;
             
             // Update progress bar
-            const progressPercent = (studied / questions.length) * 100;
+            const progressPercent = total > 0 ? (studied / total) * 100 : 0;
             document.getElementById('progress-fill').style.width = progressPercent + '%';
         }
         
@@ -7471,12 +7808,13 @@ const questions = ALL_QUESTIONS;
             // console.log('startMode called with mode:', mode);
             currentMode = mode;
             currentIndex = 0;
+            const activeQuestionIds = getActiveQuestionIds();
             
             // Setup question order
             if (mode === 'review') {
                 // console.log('Review mode - checking for wrong answers');
                 // Only show questions marked as wrong
-                questionOrder = QUESTION_IDS.filter(id => progress[id] === 'wrong');
+                questionOrder = activeQuestionIds.filter(id => progress[id] === 'wrong');
                 
                 // console.log('Wrong answers found:', questionOrder.length);
                 
@@ -7487,19 +7825,20 @@ const questions = ALL_QUESTIONS;
                     return;
                 }
             } else if (mode === 'random') {
-                questionOrder = [...QUESTION_IDS];
+                questionOrder = [...activeQuestionIds];
                 // Fisher-Yates shuffle
                 for (let i = questionOrder.length - 1; i > 0; i--) {
                     const j = Math.floor(Math.random() * (i + 1));
                     [questionOrder[i], questionOrder[j]] = [questionOrder[j], questionOrder[i]];
                 }
             } else {
-                questionOrder = [...QUESTION_IDS];
+                questionOrder = [...activeQuestionIds];
             }
             
             // Show/hide elements
             document.getElementById('mode-selection').classList.add('hidden');
             document.getElementById('main-reset-container').classList.add('hidden');
+            document.getElementById('sync-status-container').classList.add('hidden');
             document.getElementById('control-bar').classList.remove('hidden');
             document.getElementById('progress-container').classList.remove('hidden');
             document.getElementById('question-card').classList.remove('hidden');
@@ -7676,6 +8015,7 @@ const questions = ALL_QUESTIONS;
         function backToModes() {
             document.getElementById('mode-selection').classList.remove('hidden');
             document.getElementById('main-reset-container').classList.remove('hidden');
+            document.getElementById('sync-status-container').classList.remove('hidden');
             document.getElementById('control-bar').classList.add('hidden');
             document.getElementById('progress-container').classList.add('hidden');
             document.getElementById('question-card').classList.add('hidden');
@@ -7768,21 +8108,20 @@ const questions = ALL_QUESTIONS;
         
         // Show Performance Insights
         function showPerformanceInsights() {
+            const activeQuestionIds = getActiveQuestionIds();
+            const activeQuestionSet = new Set(activeQuestionIds);
+            const activeQuestions = activeQuestionIds.map((id) => getQuestion(id)).filter(Boolean);
+
             // Calculate stats
-            let correct = 0, unsure = 0, wrong = 0;
-            const studied = Object.keys(progress).length;
-            
-            for (let key in progress) {
-                if (progress[key] === 'correct') correct++;
-                else if (progress[key] === 'unsure') unsure++;
-                else if (progress[key] === 'wrong') wrong++;
-            }
+            const stats = getProgressStats(activeQuestionIds);
+            const { correct, unsure, wrong, studied } = stats;
             
             // Calculate percentages
-            const totalQuestions = questions.length;
-            const studiedPercent = Math.round((studied / totalQuestions) * 100);
+            const totalQuestions = activeQuestionIds.length;
+            const studiedPercent = totalQuestions > 0 ? Math.round((studied / totalQuestions) * 100) : 0;
             const masteredPercent = studied > 0 ? Math.round((correct / studied) * 100) : 0;
             const readinessScore = studied > 0 ? Math.round(((correct * 1.0 + unsure * 0.5) / studied) * 100) : 0;
+            const studiedRatio = totalQuestions > 0 ? studied / totalQuestions : 0;
             
             // Determine readiness level
             let readinessLevel = '';
@@ -7795,17 +8134,17 @@ const questions = ALL_QUESTIONS;
                 readinessColor = '#94a3b8';
                 readinessIcon = '📚';
                 readinessMessage = "You haven't started studying yet. Begin with Study Mode to learn the material, then test yourself with Random Mode or Mock Checkride.";
-            } else if (readinessScore >= 80 && studied >= 80) {
+            } else if (readinessScore >= 80 && studiedRatio >= 0.8) {
                 readinessLevel = 'Checkride Ready';
                 readinessColor = '#16a34a';
                 readinessIcon = '✅';
                 readinessMessage = "Excellent! You're demonstrating strong knowledge across the material. You should feel confident going into your checkride. Consider taking a Mock Checkride to simulate exam conditions.";
-            } else if (readinessScore >= 70 && studied >= 60) {
+            } else if (readinessScore >= 70 && studiedRatio >= 0.6) {
                 readinessLevel = 'Almost Ready';
                 readinessColor = '#d97706';
                 readinessIcon = '⚠️';
                 readinessMessage = "You're close! Focus on the questions you got wrong or were unsure about. Review those areas and you'll be checkride ready.";
-            } else if (studied >= 40) {
+            } else if (studiedRatio >= 0.4) {
                 readinessLevel = 'Making Progress';
                 readinessColor = '#3b82f6';
                 readinessIcon = '📈';
@@ -7819,7 +8158,7 @@ const questions = ALL_QUESTIONS;
             
             // Analyze categories by wrong/unsure answers
             const categoryAnalysis = {};
-            for (const q of questions) {
+            for (const q of activeQuestions) {
                 const category = (q.category || 'Uncategorized').toString();
                 if (!categoryAnalysis[category]) {
                     categoryAnalysis[category] = { wrong: 0, unsure: 0, correct: 0, total: 0 };
@@ -7828,6 +8167,7 @@ const questions = ALL_QUESTIONS;
             }
 
             for (const [questionId, rating] of Object.entries(progress)) {
+                if (!activeQuestionSet.has(questionId)) continue;
                 const q = getQuestion(questionId);
                 if (!q) continue;
                 const category = (q.category || 'Uncategorized').toString();
@@ -7925,7 +8265,7 @@ const questions = ALL_QUESTIONS;
                     <!-- Progress Overview -->
                     <div style="margin-bottom: 32px;">
                         <h3 style="font-size: 18px; font-weight: 700; color: #1e293b; margin-bottom: 16px;">📊 Progress Overview</h3>
-                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+                        <div class="stat-grid-4">
                             <div style="background: #f8fafc; padding: 20px; border-radius: 12px; text-align: center; border: 2px solid #e2e8f0;">
                                 <div style="font-size: 32px; font-weight: 800; color: #3b82f6;">${studied}</div>
                                 <div style="font-size: 12px; color: #64748b; font-weight: 600;">QUESTIONS STUDIED</div>
@@ -7972,6 +8312,7 @@ const questions = ALL_QUESTIONS;
             // Hide mode selection, show insights
             document.getElementById('mode-selection').classList.add('hidden');
             document.getElementById('main-reset-container').classList.add('hidden');
+            document.getElementById('sync-status-container').classList.add('hidden');
             document.getElementById('stats-dashboard').classList.add('hidden');
             
             const insightsEl = document.getElementById('insights-screen');
@@ -7986,6 +8327,7 @@ const questions = ALL_QUESTIONS;
             document.getElementById('insights-screen').classList.add('hidden');
             document.getElementById('mode-selection').classList.remove('hidden');
             document.getElementById('main-reset-container').classList.remove('hidden');
+            document.getElementById('sync-status-container').classList.remove('hidden');
             document.getElementById('stats-dashboard').classList.remove('hidden');
         }
 
@@ -8000,6 +8342,23 @@ const questions = ALL_QUESTIONS;
                 attempts: attempts[questionId] || 0,
                 updated_at: updated[questionId] || new Date().toISOString()
             }));
+        }
+
+        function scheduleCloudProgressPush() {
+            if (!cloudSync || !cloudSync.isReady()) return;
+            if (cloudPushDebounceTimer) clearTimeout(cloudPushDebounceTimer);
+
+            cloudPushDebounceTimer = setTimeout(async () => {
+                cloudPushDebounceTimer = null;
+                const rows = buildLocalProgressRows();
+                if (!rows.length) return;
+                try {
+                    await cloudSync.pushProgress(rows);
+                    renderSyncStatus();
+                } catch (error) {
+                    console.warn('[CloudSync] Debounced push failed:', error);
+                }
+            }, 1200);
         }
 
         function mergeCloudProgressRows(rows) {
@@ -8023,7 +8382,7 @@ const questions = ALL_QUESTIONS;
                 }
             }
 
-            if (changed) saveProgress();
+            if (changed) saveProgress({ skipCloudPush: true });
         }
 
         async function syncNow({ showAlerts = false, throwOnError = false } = {}) {
@@ -8037,6 +8396,8 @@ const questions = ALL_QUESTIONS;
                 if (rows.length) await cloudSync.pushProgress(rows);
                 const pulled = await cloudSync.pullProgress();
                 mergeCloudProgressRows(pulled);
+                cloudSync.lastSyncTime = Date.now();
+                renderSyncStatus();
                 if (showAlerts) alert('✅ Progress synced.');
                 return true;
             } catch (error) {
@@ -8045,8 +8406,7 @@ const questions = ALL_QUESTIONS;
                     const info = formatCloudSyncError(error);
                     alert(
                         `❌ Sync failed.${info.status ? ` (HTTP ${info.status})` : ''}\n\n` +
-                        `${info.reason}\n\n` +
-                        `${info.base}\n` +
+                        `${info.reason}\n` +
                         (info.hint ? `\nTip: ${info.hint}\n` : '\n')
                     );
                 }
@@ -8071,6 +8431,7 @@ const questions = ALL_QUESTIONS;
                     time_spent_seconds: timeSpent,
                     questions_attempted: questionsAttempted
                 });
+                renderSyncStatus();
                 console.log('[CloudSync] Mock checkride result saved');
             } catch (error) {
                 console.error('[CloudSync] Failed to save mock result:', error);
@@ -8137,6 +8498,8 @@ const questions = ALL_QUESTIONS;
             console.log('[App] Initializing...');
             renderAppVersion();
             updateStats();
+            renderAccessState();
+            renderSyncStatus();
 
             if (cloudSync.isReady()) {
                 await syncNow();
@@ -8145,6 +8508,10 @@ const questions = ALL_QUESTIONS;
         });
 
         window.addEventListener('beforeunload', () => {
+            if (cloudPushDebounceTimer) {
+                clearTimeout(cloudPushDebounceTimer);
+                cloudPushDebounceTimer = null;
+            }
             if (cloudSync && cloudSync.isReady()) {
                 cloudSync.stopAutoSync();
                 // best-effort final push
