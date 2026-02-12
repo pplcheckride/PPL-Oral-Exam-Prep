@@ -2583,7 +2583,7 @@
                 return localStorage.getItem(STORAGE.supabaseUrl) || 'https://dserfffyhcferhlpggkw.supabase.co';
             },
             get functionsBase() {
-                return `${this.projectUrl.replace(/\\/$/, '')}/functions/v1`;
+                return `${this.projectUrl.replace(/\/$/, '')}/functions/v1`;
             }
         };
 
