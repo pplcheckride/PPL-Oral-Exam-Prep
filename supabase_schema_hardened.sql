@@ -202,47 +202,51 @@ create index if not exists idx_analytics_context_gin on public.analytics_events 
 -- =========================
 -- Backfill canonical user_id coverage
 -- =========================
-with license_seeds as (
-  select
-    l.license_key_hash,
-    coalesce(l.user_id, uim.user_id, gen_random_uuid()) as user_id
-  from public.licenses l
-  left join public.user_identity_map uim
-    on uim.identity_type = 'license_key_hash'
-   and uim.identity_value = l.license_key_hash
-)
+create temporary table if not exists tmp_license_identity_resolution (
+  license_key_hash text primary key,
+  user_id uuid not null
+) on commit drop;
+
+truncate table tmp_license_identity_resolution;
+
+insert into tmp_license_identity_resolution (license_key_hash, user_id)
+select
+  l.license_key_hash,
+  coalesce(l.user_id, uim.user_id, gen_random_uuid()) as user_id
+from public.licenses l
+left join public.user_identity_map uim
+  on uim.identity_type = 'license_key_hash'
+ and uim.identity_value = l.license_key_hash;
+
 insert into public.users (user_id, is_premium)
 select distinct user_id, true
-from license_seeds
-where user_id is not null
+from tmp_license_identity_resolution
 on conflict (user_id) do update
   set is_premium = true,
       updated_at = now();
 
-with license_seeds as (
-  select
-    l.license_key_hash,
-    coalesce(l.user_id, uim.user_id, gen_random_uuid()) as user_id
-  from public.licenses l
-  left join public.user_identity_map uim
-    on uim.identity_type = 'license_key_hash'
-   and uim.identity_value = l.license_key_hash
-)
 insert into public.user_identity_map (identity_type, identity_value, user_id)
 select 'license_key_hash', license_key_hash, user_id
-from license_seeds
+from tmp_license_identity_resolution
 where license_key_hash is not null
 on conflict (identity_type, identity_value) do update
   set user_id = excluded.user_id,
       updated_at = now();
 
 update public.licenses l
-set user_id = uim.user_id
-from public.user_identity_map uim
-where uim.identity_type = 'license_key_hash'
-  and uim.identity_value = l.license_key_hash
-  and (l.user_id is null or l.user_id is distinct from uim.user_id);
+set user_id = r.user_id
+from tmp_license_identity_resolution r
+where r.license_key_hash = l.license_key_hash
+  and (l.user_id is null or l.user_id is distinct from r.user_id);
 
+create temporary table if not exists tmp_anon_identity_resolution (
+  identity_value text primary key,
+  user_id uuid not null
+) on commit drop;
+
+truncate table tmp_anon_identity_resolution;
+
+insert into tmp_anon_identity_resolution (identity_value, user_id)
 with anon_seeds as (
   select distinct ae.anon_id
   from public.analytics_events ae
@@ -268,39 +272,17 @@ resolved as (
     limit 1
   ) linked_license on true
 )
+select identity_value, user_id
+from resolved;
+
 insert into public.users (user_id)
 select distinct user_id
-from resolved
+from tmp_anon_identity_resolution
 on conflict (user_id) do nothing;
 
-with anon_seeds as (
-  select distinct ae.anon_id
-  from public.analytics_events ae
-  where ae.anon_id is not null
-),
-resolved as (
-  select
-    s.anon_id as identity_value,
-    coalesce(linked_license.user_id, existing_anon.user_id, gen_random_uuid()) as user_id
-  from anon_seeds s
-  left join public.user_identity_map existing_anon
-    on existing_anon.identity_type = 'anon_id'
-   and existing_anon.identity_value = s.anon_id
-  left join lateral (
-    select lm.user_id
-    from public.analytics_events ae2
-    join public.user_identity_map lm
-      on lm.identity_type = 'license_key_hash'
-     and lm.identity_value = ae2.license_key_hash
-    where ae2.anon_id = s.anon_id
-      and ae2.license_key_hash is not null
-    order by ae2.occurred_at asc
-    limit 1
-  ) linked_license on true
-)
 insert into public.user_identity_map (identity_type, identity_value, user_id)
 select 'anon_id', identity_value, user_id
-from resolved
+from tmp_anon_identity_resolution
 on conflict (identity_type, identity_value) do update
   set user_id = excluded.user_id,
       updated_at = now();
