@@ -2903,8 +2903,12 @@
         }
 
         function trackEvent(eventName, payload = {}) {
-            if (!analyticsClient) return;
-            analyticsClient.track(eventName, payload);
+            try {
+                if (!analyticsClient) return;
+                analyticsClient.track(eventName, payload);
+            } catch (error) {
+                console.warn('[Analytics] trackEvent failed:', error);
+            }
         }
 
         function renderAnalyticsConsentState() {
@@ -7039,19 +7043,34 @@ const questions = ALL_QUESTIONS;
         
         // Show app
         function startApp() {
-            trackEvent('start_studying_clicked', {
-                pageName: 'landing',
-                properties: { source: 'landing_cta' }
-            });
-            document.getElementById('landing-screen').classList.add('hidden');
-            document.getElementById('app-screen').classList.add('active');
-            updateStats();
+            try {
+                trackEvent('start_studying_clicked', {
+                    pageName: 'landing',
+                    properties: { source: 'landing_cta' }
+                });
+            } catch (_) {
+                // keep navigation resilient even if analytics fails
+            }
+
+            const landingScreen = document.getElementById('landing-screen');
+            const appScreen = document.getElementById('app-screen');
+            if (landingScreen) landingScreen.classList.add('hidden');
+            if (appScreen) appScreen.classList.add('active');
+            try {
+                updateStats();
+            } catch (error) {
+                console.warn('[App] updateStats failed during startApp:', error);
+            }
             
             // Show onboarding on first visit
-            const hasSeenOnboarding = localStorage.getItem('ppl-seen-onboarding');
-            if (!hasSeenOnboarding) {
-                document.getElementById('onboarding-overlay').classList.remove('hidden');
-                trackEvent('onboarding_shown', { pageName: 'onboarding' });
+            try {
+                const hasSeenOnboarding = localStorage.getItem('ppl-seen-onboarding');
+                if (!hasSeenOnboarding) {
+                    document.getElementById('onboarding-overlay').classList.remove('hidden');
+                    trackEvent('onboarding_shown', { pageName: 'onboarding' });
+                }
+            } catch (error) {
+                console.warn('[App] onboarding state read failed:', error);
             }
         }
         
