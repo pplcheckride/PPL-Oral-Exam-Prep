@@ -23,6 +23,7 @@ echo "Deploying edge functions to project-ref: ${PROJECT_REF}"
 supabase functions deploy license_exchange --project-ref "${PROJECT_REF}" --no-verify-jwt
 supabase functions deploy progress_sync --project-ref "${PROJECT_REF}" --no-verify-jwt
 supabase functions deploy mock_results --project-ref "${PROJECT_REF}" --no-verify-jwt
+supabase functions deploy events_ingest --project-ref "${PROJECT_REF}" --no-verify-jwt
 
 BASE="https://${PROJECT_REF}.supabase.co/functions/v1"
 
@@ -51,3 +52,50 @@ echo "Smoke test: progress_sync GET"
 curl -sS -i "${BASE}/progress_sync" \
   -H "apikey: ${PUBLISHABLE_KEY}" \
   -H "Authorization: Bearer ${TOKEN}"
+
+FREE_EVENT_ID="$(uuidgen | tr '[:upper:]' '[:lower:]')"
+PAID_EVENT_ID="$(uuidgen | tr '[:upper:]' '[:lower:]')"
+ANON_ID="anon-$(uuidgen | tr '[:upper:]' '[:lower:]')"
+SESSION_ID="$(uuidgen | tr '[:upper:]' '[:lower:]')"
+NOW_UTC="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+
+echo
+echo "Smoke test: events_ingest FREE event"
+curl -sS -i "${BASE}/events_ingest" \
+  -H "apikey: ${PUBLISHABLE_KEY}" \
+  -H "content-type: application/json" \
+  --data "{
+    \"events\": [
+      {
+        \"event_id\": \"${FREE_EVENT_ID}\",
+        \"event_name\": \"landing_viewed\",
+        \"occurred_at\": \"${NOW_UTC}\",
+        \"anon_id\": \"${ANON_ID}\",
+        \"session_id\": \"${SESSION_ID}\",
+        \"page_name\": \"landing\",
+        \"properties\": {\"source\": \"smoke\"},
+        \"context\": {\"tier_hint\": \"free\", \"app_version\": \"smoke-test\"}
+      }
+    ]
+  }"
+
+echo
+echo "Smoke test: events_ingest PAID event"
+curl -sS -i "${BASE}/events_ingest" \
+  -H "apikey: ${PUBLISHABLE_KEY}" \
+  -H "Authorization: Bearer ${TOKEN}" \
+  -H "content-type: application/json" \
+  --data "{
+    \"events\": [
+      {
+        \"event_id\": \"${PAID_EVENT_ID}\",
+        \"event_name\": \"license_exchange_success\",
+        \"occurred_at\": \"${NOW_UTC}\",
+        \"anon_id\": \"${ANON_ID}\",
+        \"session_id\": \"${SESSION_ID}\",
+        \"page_name\": \"landing\",
+        \"properties\": {\"source\": \"smoke\"},
+        \"context\": {\"tier_hint\": \"paid\", \"app_version\": \"smoke-test\"}
+      }
+    ]
+  }"
