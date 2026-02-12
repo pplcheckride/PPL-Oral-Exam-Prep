@@ -2,6 +2,7 @@ import { createClient } from "npm:@supabase/supabase-js@2";
 import { corsHeaders, jsonResponse } from "../_shared/cors.ts";
 import { requirePublishableKey } from "../_shared/api_key.ts";
 import { verifyLicenseJwt } from "../_shared/jwt.ts";
+import { resolveOrCreateUserId } from "../_shared/user_identity.ts";
 
 function getEnv(name: string): string {
   const v = Deno.env.get(name);
@@ -47,6 +48,11 @@ function isRatingConstraintError(message: string | undefined): boolean {
   return m.includes("user_progress_rating_check") || (m.includes("violates check constraint") && m.includes("rating"));
 }
 
+function isMissingConflictConstraintError(message: string | undefined): boolean {
+  const m = (message || "").toLowerCase();
+  return m.includes("no unique or exclusion constraint matching the on conflict specification");
+}
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
 
@@ -66,13 +72,37 @@ Deno.serve(async (req) => {
     const licenseKeyHash = payload.license_key_hash;
 
     const supabase = createClient(supabaseUrl, serviceKey, { auth: { persistSession: false } });
+    const userId = await resolveOrCreateUserId({
+      supabase,
+      licenseKeyHash,
+      userTier: "paid",
+      occurredAt: new Date().toISOString(),
+    });
 
     if (req.method === "GET") {
-      const { data, error } = await supabase
+      let { data, error } = await supabase
         .from("user_progress")
         .select("question_id,rating,attempts,updated_at")
-        .eq("license_key_hash", licenseKeyHash);
+        .eq("user_id", userId);
+
       if (error) return jsonResponse({ error: error.message }, { status: 500 });
+
+      if (!Array.isArray(data) || data.length === 0) {
+        const legacy = await supabase
+          .from("user_progress")
+          .select("question_id,rating,attempts,updated_at")
+          .eq("license_key_hash", licenseKeyHash);
+
+        if (legacy.error) return jsonResponse({ error: legacy.error.message }, { status: 500 });
+        data = legacy.data ?? [];
+
+        await supabase
+          .from("user_progress")
+          .update({ user_id: userId })
+          .eq("license_key_hash", licenseKeyHash)
+          .is("user_id", null);
+      }
+
       const normalized = (data ?? []).map((row: any) => {
         const parsed = normalizeRating(row?.rating);
         return {
@@ -93,6 +123,7 @@ Deno.serve(async (req) => {
           const parsed = normalizeRating(r.rating);
           if (!parsed) return null;
           return {
+            user_id: userId,
             license_key_hash: licenseKeyHash,
             question_id: r.question_id,
             rating: toAppRating(parsed),
@@ -104,13 +135,24 @@ Deno.serve(async (req) => {
 
       if (upserts.length === 0) return jsonResponse({ ok: true, upserted: 0 });
 
-      const { error: firstError } = await supabase
+      let conflictKey = "user_id,question_id";
+      let firstAttempt = await supabase
         .from("user_progress")
-        .upsert(upserts, { onConflict: "license_key_hash,question_id" });
-      if (!firstError) return jsonResponse({ ok: true, upserted: upserts.length, schemaMode: "app" });
+        .upsert(upserts as any[], { onConflict: conflictKey });
 
-      if (!isRatingConstraintError(firstError.message)) {
-        return jsonResponse({ error: firstError.message }, { status: 500 });
+      if (firstAttempt.error && isMissingConflictConstraintError(firstAttempt.error.message)) {
+        conflictKey = "license_key_hash,question_id";
+        firstAttempt = await supabase
+          .from("user_progress")
+          .upsert(upserts as any[], { onConflict: conflictKey });
+      }
+
+      if (!firstAttempt.error) {
+        return jsonResponse({ ok: true, upserted: upserts.length, schemaMode: "app", conflictKey });
+      }
+
+      if (!isRatingConstraintError(firstAttempt.error.message)) {
+        return jsonResponse({ error: firstAttempt.error.message }, { status: 500 });
       }
 
       const legacyUpserts = (upserts as any[]).map((row) => ({
@@ -118,17 +160,25 @@ Deno.serve(async (req) => {
         rating: toLegacyRating(row.rating),
       }));
 
-      const { error: legacyError } = await supabase
+      let legacyAttempt = await supabase
         .from("user_progress")
-        .upsert(legacyUpserts, { onConflict: "license_key_hash,question_id" });
-      if (legacyError) {
+        .upsert(legacyUpserts, { onConflict: conflictKey });
+
+      if (legacyAttempt.error && isMissingConflictConstraintError(legacyAttempt.error.message) && conflictKey !== "license_key_hash,question_id") {
+        conflictKey = "license_key_hash,question_id";
+        legacyAttempt = await supabase
+          .from("user_progress")
+          .upsert(legacyUpserts, { onConflict: conflictKey });
+      }
+
+      if (legacyAttempt.error) {
         return jsonResponse({
-          error: legacyError.message,
-          firstError: firstError.message,
+          error: legacyAttempt.error.message,
+          firstError: firstAttempt.error.message,
         }, { status: 500 });
       }
 
-      return jsonResponse({ ok: true, upserted: upserts.length, schemaMode: "legacy" });
+      return jsonResponse({ ok: true, upserted: upserts.length, schemaMode: "legacy", conflictKey });
     }
 
     return jsonResponse({ error: "Method not allowed" }, { status: 405 });

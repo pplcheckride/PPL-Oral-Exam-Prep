@@ -2832,7 +2832,9 @@
             }
 
             async exchangeLicenseKey(licenseKey) {
-                const data = await this.request('/license_exchange', { method: 'POST', body: { licenseKey } });
+                const anonId = localStorage.getItem(STORAGE.analyticsAnonId);
+                const requestBody = anonId ? { licenseKey, anonId } : { licenseKey };
+                const data = await this.request('/license_exchange', { method: 'POST', body: requestBody });
                 if (!data || !data.token || !data.licenseKeyHash) {
                     throw new Error('Invalid response from license_exchange');
                 }

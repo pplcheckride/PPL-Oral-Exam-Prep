@@ -2,6 +2,7 @@ import { createClient } from "npm:@supabase/supabase-js@2";
 import { corsHeaders, jsonResponse } from "../_shared/cors.ts";
 import { requirePublishableKey } from "../_shared/api_key.ts";
 import { verifyLicenseJwt } from "../_shared/jwt.ts";
+import { resolveOrCreateUserId } from "../_shared/user_identity.ts";
 
 function getEnv(name: string): string {
   const v = Deno.env.get(name);
@@ -35,17 +36,44 @@ Deno.serve(async (req) => {
     const licenseKeyHash = payload.license_key_hash;
 
     const supabase = createClient(supabaseUrl, serviceKey, { auth: { persistSession: false } });
+    const userId = await resolveOrCreateUserId({
+      supabase,
+      licenseKeyHash,
+      userTier: "paid",
+      occurredAt: new Date().toISOString(),
+    });
 
     if (req.method === "GET") {
       const url = new URL(req.url);
       const limit = Math.min(Number(url.searchParams.get("limit") || "10") || 10, 50);
-      const { data, error } = await supabase
+
+      let { data, error } = await supabase
         .from("mock_checkride_results")
         .select("id,score,total_questions,passed,time_spent_seconds,questions_attempted,completed_at")
-        .eq("license_key_hash", licenseKeyHash)
+        .eq("user_id", userId)
         .order("completed_at", { ascending: false })
         .limit(limit);
+
       if (error) return jsonResponse({ error: error.message }, { status: 500 });
+
+      if (!Array.isArray(data) || data.length === 0) {
+        const legacy = await supabase
+          .from("mock_checkride_results")
+          .select("id,score,total_questions,passed,time_spent_seconds,questions_attempted,completed_at")
+          .eq("license_key_hash", licenseKeyHash)
+          .order("completed_at", { ascending: false })
+          .limit(limit);
+
+        if (legacy.error) return jsonResponse({ error: legacy.error.message }, { status: 500 });
+        data = legacy.data ?? [];
+
+        await supabase
+          .from("mock_checkride_results")
+          .update({ user_id: userId })
+          .eq("license_key_hash", licenseKeyHash)
+          .is("user_id", null);
+      }
+
       return jsonResponse(data ?? []);
     }
 
@@ -62,6 +90,7 @@ Deno.serve(async (req) => {
       }
 
       const { error } = await supabase.from("mock_checkride_results").insert({
+        user_id: userId,
         license_key_hash: licenseKeyHash,
         score,
         total_questions: totalQuestions,

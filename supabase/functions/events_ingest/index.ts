@@ -1,6 +1,7 @@
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { corsHeaders, jsonResponse } from "../_shared/cors.ts";
 import { verifyLicenseJwt } from "../_shared/jwt.ts";
+import { resolveOrCreateUserId } from "../_shared/user_identity.ts";
 
 const MAX_EVENTS_PER_REQUEST = 50;
 const MAX_CONTENT_LENGTH_BYTES = 256_000;
@@ -58,6 +59,7 @@ type AnalyticsInsert = {
   event_id: string;
   event_name: string;
   occurred_at: string;
+  user_id: string;
   anon_id: string;
   session_id: string;
   user_tier: EventTier;
@@ -152,7 +154,7 @@ function sanitizeEvent(args: {
   userTier: EventTier;
   licenseKeyHash: string | null;
   errors: ValidationError[];
-}): AnalyticsInsert | null {
+}): Omit<AnalyticsInsert, "user_id"> | null {
   const { rawEvent, index, userTier, licenseKeyHash, errors } = args;
   const ev = asRecord(rawEvent);
 
@@ -261,15 +263,36 @@ Deno.serve(async (req) => {
     }
 
     const errors: ValidationError[] = [];
-    const rows: AnalyticsInsert[] = [];
+    const sanitizedRows: Array<Omit<AnalyticsInsert, "user_id">> = [];
 
     rawEvents.forEach((rawEvent, index) => {
       const row = sanitizeEvent({ rawEvent, index, userTier, licenseKeyHash, errors });
-      if (row) rows.push(row);
+      if (row) sanitizedRows.push(row);
     });
 
-    if (rows.length > 0) {
+    if (sanitizedRows.length > 0) {
       const supabase = createClient(supabaseUrl, serviceKey, { auth: { persistSession: false } });
+      const userIdCache = new Map<string, string>();
+      const rows: AnalyticsInsert[] = [];
+
+      for (const row of sanitizedRows) {
+        const identityKey = `${row.anon_id}::${row.license_key_hash || ""}`;
+        let userId = userIdCache.get(identityKey);
+        if (!userId) {
+          userId = await resolveOrCreateUserId({
+            supabase,
+            anonId: row.anon_id,
+            licenseKeyHash: row.license_key_hash,
+            userTier: row.user_tier,
+            occurredAt: row.occurred_at,
+            eventName: row.event_name,
+          });
+          userIdCache.set(identityKey, userId);
+        }
+
+        rows.push({ ...row, user_id: userId });
+      }
+
       const { error } = await supabase
         .from("analytics_events")
         .upsert(rows, { onConflict: "event_id", ignoreDuplicates: true });
@@ -280,12 +303,12 @@ Deno.serve(async (req) => {
     }
 
     const response = {
-      accepted: rows.length,
+      accepted: sanitizedRows.length,
       rejected: errors.length,
       errors,
     };
 
-    if (rows.length === 0 && errors.length > 0) {
+    if (sanitizedRows.length === 0 && errors.length > 0) {
       return jsonResponse(response, { status: 400 });
     }
 

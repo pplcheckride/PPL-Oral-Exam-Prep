@@ -3,6 +3,7 @@ import { corsHeaders, jsonResponse } from "../_shared/cors.ts";
 import { requirePublishableKey } from "../_shared/api_key.ts";
 import { sha256Hex } from "../_shared/sha256.ts";
 import { signLicenseJwt } from "../_shared/jwt.ts";
+import { resolveOrCreateUserId } from "../_shared/user_identity.ts";
 
 function getEnv(name: string): string {
   const v = Deno.env.get(name);
@@ -18,7 +19,10 @@ Deno.serve(async (req) => {
     const keyCheck = requirePublishableKey(req);
     if (!keyCheck.ok) return jsonResponse({ error: keyCheck.error }, { status: 401 });
 
-    const { licenseKey } = await req.json();
+    const body = await req.json().catch(() => ({}));
+    const licenseKey = body?.licenseKey;
+    const anonId = typeof body?.anonId === "string" && body.anonId.trim() ? body.anonId.trim() : null;
+
     if (!licenseKey || typeof licenseKey !== "string") {
       return jsonResponse({ error: "licenseKey is required" }, { status: 400 });
     }
@@ -42,6 +46,14 @@ Deno.serve(async (req) => {
     if (error) return jsonResponse({ error: error.message }, { status: 500 });
     if (!data || data.status !== "active") return jsonResponse({ error: "Invalid license" }, { status: 401 });
 
+    const userId = await resolveOrCreateUserId({
+      supabase,
+      licenseKeyHash,
+      anonId,
+      userTier: "paid",
+      occurredAt: new Date().toISOString(),
+    });
+
     const sevenDays = 7 * 24 * 60 * 60;
     const { token, payload } = await signLicenseJwt({
       secret: jwtSecret,
@@ -51,6 +63,7 @@ Deno.serve(async (req) => {
 
     return jsonResponse({
       token,
+      userId,
       licenseKeyHash,
       expiresAt: new Date(payload.exp * 1000).toISOString(),
     });
